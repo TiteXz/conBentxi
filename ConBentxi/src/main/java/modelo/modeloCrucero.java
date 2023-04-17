@@ -24,7 +24,7 @@ public class modeloCrucero extends Conexion{
 				crucero.setNombre(resultado.getString("nombre"));
 				crucero.setCapitan(resultado.getString("capitan"));
 				crucero.setCategoria(resultado.getString("categoria"));
-				crucero.setRuta(resultado.getInt("ruta"));
+				crucero.setId_ruta(resultado.getInt("id_ruta"));
 				
 				cruceros.add(crucero);
 			}
