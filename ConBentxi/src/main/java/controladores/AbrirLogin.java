@@ -1,28 +1,23 @@
 package controladores;
 
 import java.io.IOException;
-import java.util.ArrayList;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import clases.Crucero;
-import modelo.modeloCrucero;
-
 /**
- * Servlet implementation class VerCruceros
+ * Servlet implementation class AbrirLogin
  */
-@WebServlet("/VerCruceros")
-public class VerCruceros extends HttpServlet {
+@WebServlet("/AbrirLogin")
+public class AbrirLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public VerCruceros() {
+    public AbrirLogin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,15 +27,8 @@ public class VerCruceros extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		modeloCrucero mC = new modeloCrucero();
-		
-		mC.Conectar();
-		ArrayList<Crucero> cruceros = mC.getCruceros();
-		mC.cerrar();
-		
-		request.setAttribute("cruceros", cruceros);
-		request.getRequestDispatcher("VistaCruceros.jsp").forward(request, response);	}
+		request.getRequestDispatcher("FormLogin.jsp").forward(request, response);
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

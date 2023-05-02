@@ -7,18 +7,21 @@ public class Parada {
 	private int id_parada;
 	private String ciudad;
 	private String pais;
-	private Date tiempo_quieto;
-	private String descripcion;
+	private Date tiempo_estacionamiento;
+	private Date fecha_salida;
+	private Date fecha_llegada;
 	
 	public Parada() {}
 
-	public Parada(int id_parada, String ciudad, String pais, Date tiempo_quieto, String descripcion) {
+	public Parada(int id_parada, String ciudad, String pais, Date tiempo_estacionamiento, Date fecha_salida, Date fecha_llegada) {
 		super();
 		this.id_parada = id_parada;
 		this.ciudad = ciudad;
 		this.pais = pais;
-		this.tiempo_quieto = tiempo_quieto;
-		this.descripcion = descripcion;
+		this.tiempo_estacionamiento = tiempo_estacionamiento;
+		this.setFecha_salida(fecha_salida);
+		this.setFecha_llegada(fecha_llegada);
+		
 	}
 
 	public int getId_parada() {
@@ -45,30 +48,33 @@ public class Parada {
 		this.pais = pais;
 	}
 
-	public Date getTiempo_quieto() {
-		return tiempo_quieto;
+	public Date getTiempo_estacionamiento() {
+		return tiempo_estacionamiento;
 	}
 
-	public void setTiempo_quieto(Date tiempo_quieto) {
-		this.tiempo_quieto = tiempo_quieto;
+	public void setTiempo_estacionamiento(Date tiempo_estacionamiento) {
+		this.tiempo_estacionamiento = tiempo_estacionamiento;
 	}
 
-	public String getDescripcion() {
-		return descripcion;
+	public Date getFecha_salida() {
+		return fecha_salida;
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setFecha_salida(Date fecha_salida) {
+		this.fecha_salida = fecha_salida;
+	}
+
+	public Date getFecha_llegada() {
+		return fecha_llegada;
+	}
+
+	public void setFecha_llegada(Date fecha_llegada) {
+		this.fecha_llegada = fecha_llegada;
 	}
 
 	@Override
 	public String toString() {
-		return "parada [id_parada=" + id_parada + ", ciudad=" + ciudad + ", pais=" + pais + ", tiempo_quieto="
-				+ tiempo_quieto + ", descripcion=" + descripcion + "]";
+		return "Parada [id_parada=" + id_parada + ", ciudad=" + ciudad + ", pais=" + pais + ", tiempo_estacionamiento="
+				+ tiempo_estacionamiento + ", fecha_salida=" + fecha_salida + ", fecha_llegada=" + fecha_llegada + "]";
 	}
-	
-	
-	
-	
-	
 }

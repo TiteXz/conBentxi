@@ -7,16 +7,21 @@ public class Empleado {
 	private String apellido;
 	private String trabajo;
 	private int id_crucero;
+	private String usuario;
+	private String password;
 	
 	public Empleado() {}
 
-	public Empleado(int id_empleado, String nombre, String apellido, String trabajo, int id_crucero) {
+	public Empleado(int id_empleado, String nombre, String apellido, String trabajo, int id_crucero, String usuario,
+			String password) {
 		super();
 		this.id_empleado = id_empleado;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.trabajo = trabajo;
 		this.id_crucero = id_crucero;
+		this.usuario = usuario;
+		this.password = password;
 	}
 
 	public int getId_empleado() {
@@ -59,11 +64,29 @@ public class Empleado {
 		this.id_crucero = id_crucero;
 	}
 
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public String toString() {
-		return "empleado [id_empleado=" + id_empleado + ", nombre=" + nombre + ", apellido=" + apellido + ", trabajo="
-				+ trabajo + ", id_crucero=" + id_crucero + "]";
+		return "Empleado [id_empleado=" + id_empleado + ", nombre=" + nombre + ", apellido=" + apellido + ", trabajo="
+				+ trabajo + ", id_crucero=" + id_crucero + ", usuario=" + usuario + ", password=" + password + "]";
 	}
+
+	
 	
 	
 

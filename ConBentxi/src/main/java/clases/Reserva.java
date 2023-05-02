@@ -2,7 +2,7 @@ package clases;
 
 import java.util.Date;
 
-public class Reservas {
+public class Reserva {
 
 	private int id_crucero;
 	private String dni_cliente;
@@ -10,10 +10,10 @@ public class Reservas {
 	private Date fecha_fin;
 	
 	
-	public Reservas() {}
+	public Reserva() {}
 
 
-	public Reservas(int id_crucero, String dni_cliente, Date fecha_ini, Date fecha_fin) {
+	public Reserva(int id_crucero, String dni_cliente, Date fecha_ini, Date fecha_fin) {
 		super();
 		this.id_crucero = id_crucero;
 		this.dni_cliente = dni_cliente;

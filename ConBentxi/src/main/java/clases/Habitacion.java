@@ -7,12 +7,13 @@ public class Habitacion {
 	private int id_crucero; 
 	private String dni_cliente;
 	private int id_empleado;
+	private String imagen;
 	
 	
 	public Habitacion() {}
 
 	public Habitacion(int numero_habita, String descripcion, double precio, int id_crucero, String dni_cliente,
-			int id_empleado) {
+			int id_empleado, String imagen) {
 		super();
 		this.numero_habita = numero_habita;
 		this.descripcion = descripcion;
@@ -20,6 +21,7 @@ public class Habitacion {
 		this.id_crucero = id_crucero;
 		this.dni_cliente = dni_cliente;
 		this.id_empleado = id_empleado;
+		this.imagen = imagen;
 	}
 
 	public int getNumero_habita() {
@@ -70,5 +72,11 @@ public class Habitacion {
 		this.id_empleado = id_empleado;
 	}
 	
+	public String getImagen() {
+		return imagen;
+	}
 	
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
 }

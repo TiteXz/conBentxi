@@ -3,36 +3,6 @@ package modelo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
-
-
-
-//public class Conexion {
-//	
-//	
-//
-//	protected  Connection conexion;
-//	
-//	public void Conectar() {
-//		
-//	String url = "jdbc:oracle:thin:@"+ParametrosConexion.HOST+":"+ParametrosConexion.PORT+":xe";
-//	
-//	Properties props = new Properties();
-//
-//	props.setProperty("user", ParametrosConexion.USERNAME);
-//
-//	props.setProperty("password", ParametrosConexion.PASSWORD);
-//
-//	// creating connection to Oracle database
-//
-//	conexion = DriverManager.getConnection(url, props);
-//
-//	statement = conexion.createStatement();
-//
-//	System.out.println("Se ha conectado a la BBDD-Oracle satisfactoriamente");
-//	
-//	}
-//}
 
 
 public class Conexion {

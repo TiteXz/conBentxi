@@ -55,7 +55,7 @@ public class Crucero {
 		return id_ruta;
 	}
 
-	public void setId_ruta(int ruta) {
+	public void setRuta(int ruta) {
 		this.id_ruta = ruta;
 	}
 
