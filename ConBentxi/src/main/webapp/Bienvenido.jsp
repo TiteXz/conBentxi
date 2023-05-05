@@ -233,7 +233,7 @@ background-positon-x
 
 	<ul class="menuRayas1">
 		<li><a href="AinadirActi.jsp">actividad</a></li>
-		<li><a href="AinadirCrucero.jsp">cruceros</a></li>
+		<li><a href="InsertarCrucero">cruceros</a></li>
 		<li><a href="AinadirEmple.jsp">empleados</a></li>
 		<li><a href="AinadirHabita.jsp">habitaciones</a></li>
 		<li><a href="AinadirParada.jsp">paradas</a></li>
@@ -246,7 +246,7 @@ background-positon-x
 
 	<ul class="menuRayas">
 		<li><a href="VisualizarActi.jsp">actividad</a></li>
-		<li><a href="VisualizarCrucero.jsp">cruceros</a></li>
+		<li><a href="VerCruceros">cruceros</a></li>
 		<li><a href="VisualizarEmple.jsp">empleados</a></li>
 		<li><a href="VisualizarHabita.jsp">habitaciones</a></li>
 		<li><a href="VisualizarParada.jsp">paradas</a></li>

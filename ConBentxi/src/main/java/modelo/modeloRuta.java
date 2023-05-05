@@ -42,6 +42,37 @@ public class modeloRuta extends Conexion{
 		}
 	}
 
+	public ArrayList<Ruta> buscarRutas(String destino){
+		ArrayList<Ruta>rutas = new ArrayList<Ruta>();
+		
+		try {
+			PreparedStatement pst = conexion.prepareStatement("Select * FROM rutas WHERE destino = ?");
+			pst.setString(1, destino);
+			
+			ResultSet resultado = pst.executeQuery();
+			
+			while(resultado.next()) {
+				Ruta ruta = new Ruta();
+				
+				ruta.setId_ruta(resultado.getInt("id_ruta"));
+				ruta.setFecha_ini(resultado.getDate("fecha_ini"));
+				ruta.setFecha_fin(resultado.getDate("fecha_fin"));
+				ruta.setOrigen(resultado.getString("origen"));
+				ruta.setDestino(resultado.getString("destino"));
+				ruta.setPrecio(resultado.getDouble("precio"));
+				
+				rutas.add(ruta);
+				
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return rutas;
+		
+	}
+	
 	public ArrayList<Ruta> getRutas() {
 		ArrayList<Ruta> rutas = new ArrayList<Ruta>();
 		

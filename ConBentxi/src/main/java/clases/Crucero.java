@@ -7,16 +7,18 @@ public class Crucero {
 	private String capitan;
 	private String categoria;
 	private int id_ruta;
+	private String imagen;
 	
 	public Crucero() {}
 
-	public Crucero(int id_crucero, String nombre, String capitan, String categoria, int id_ruta) {
+	public Crucero(int id_crucero, String nombre, String capitan, String categoria, int id_ruta, String imagen) {
 		super();
 		this.id_crucero = id_crucero;
 		this.nombre = nombre;
 		this.capitan = capitan;
 		this.categoria = categoria;
 		this.id_ruta = id_ruta;
+		this.imagen = imagen;
 	}
 
 	public int getId_crucero() {
@@ -55,14 +57,22 @@ public class Crucero {
 		return id_ruta;
 	}
 
-	public void setRuta(int ruta) {
-		this.id_ruta = ruta;
+	public void setId_ruta(int id_ruta) {
+		this.id_ruta = id_ruta;
+	}
+	
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 
 	@Override
 	public String toString() {
 		return "crucero [id_crucero=" + id_crucero + ", nombre=" + nombre + ", capitan=" + capitan + ", categoria="
-				+ categoria + ", id_ruta=" + id_ruta + "]";
+				+ categoria + ", id_ruta=" + id_ruta + " imagen= " +  imagen +"]";
 	}
 	
 	

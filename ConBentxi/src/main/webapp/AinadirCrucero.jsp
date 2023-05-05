@@ -179,9 +179,7 @@ nav ul {
 		<ul>
 			<li><a>
 					<div id="formulario">
-						<form method="POST" action="AñadirCrucero">
-							<label><input type="number" id="id_crucero"
-								name="id_crucero" placeholder="id_crucero" /></label> <br> <br>
+						<form method="POST" action="InsertarCrucero">
 							<label><input type="text" id="nombre" name="nombre"
 								placeholder="nombre" /></label> <br> <br> <label><input
 								type="text" id="capitan" name="capitan" placeholder="capitan" /></label>

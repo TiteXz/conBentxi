@@ -9,50 +9,6 @@
 </head>
 <style> 
 
-.menu a:hover {
-    opacity: 1;
-    color: rgb(0, 81, 255);
-    transition: ease .15s;
-}
-
-.menu {
-    width: 100%;
-    height: 75px;
-    background-color: rgba(255, 255, 255, 0.911);
-    position: fixed;
-    box-shadow: 4px 0px 4px 0;
-    z-index: 100;
-    padding-top: 25px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: black;
-    opacity: 0.8;
-}
-
-#a1{
-    margin-left: 1450px;
-    margin-top: 15px;
-}
-
-#a2{
-    margin-left: 50px;
-    margin-top: 15px;
-}
-
-#a3{
-     margin-left: 50px;
-     margin-top: 15px;
-}
-
-#login{
-     margin-left: 50px;
-     border: 2px solid black;
-     padding: 5px;
-     border-radius: 10px;
-     margin-top: 15px;
-}
 
 
 .footer {
@@ -191,13 +147,6 @@
 </style>
 
 <body>
-
-<div class="menu">
-        <a id="a1" href="Home.jsp">HOME</a>
-        <a id="a2" href="Cruceros.html">CRUCEROS</a>
-        <a id="a3" href="Rutas.jsp">RUTAS</a>
-        <a id="login" href="FormLogin.jsp">LOG IN</a>
-    </div>
 
     <br><br><br>
 

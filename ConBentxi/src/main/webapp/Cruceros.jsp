@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,14 +11,25 @@
 
 <style>
 
+.card-img-overlay{
+opacity: 0;
+}
+
+.card-img-overlay:hover{
+opacity: 1;
+background: rgba(0, 195, 255, 0.87);
+transition: ease .5s;
+cursor:grab;
+}
+
 body {
     background-color: #eee;
 }
 
 .menu a:hover {
-    opacity: 1;
-    color: rgb(0, 81, 255);
-    transition: ease .15s;
+    background-color: #0062ff;
+    box-shadow: 0 0 0 5px #1f75ff5f;
+    color: #fff;
 }
 
 .menu {
@@ -34,6 +46,10 @@ body {
     text-decoration: none;
     color: black;
     opacity: 0.8;
+    border: 2px solid rgba(0, 0, 0, 0);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .3s;
 }
 
 #a1 {
@@ -65,17 +81,15 @@ body {
     margin-left: 225px;
 }
 
+
 #row {
     display: inline-flex;
 }
 
-.card-img-overlay{
-	opacity:0;
-}
-
-.card-img-overlay:hover{
-	opacity:1;
-	background-color:rgba(0, 102, 255, 0.329);
+.card-text{
+    margin: 60% 0 0 10%;
+    color: black;
+    font-family: 'Courier new';
 }
 
 .footer {
@@ -198,11 +212,126 @@ body {
     }
 }
 
+h2{
+    font-family: 'Courier new';
+    text-align: center;
+    font-size: 40px;
+}
+
+@media only screen and (min-width: 1501px) {
+
+    #a1 {
+        margin-left: 70%;
+    }
+
+    .card{
+        width: 20%;
+        height: 15%;
+        display: inline-flex;
+        margin: 5% 0 0 20%;
+    }
+
+    #row{
+        display: inline-flex;
+    }
+
+}
+
+@media only screen and ((min-width: 1201px) and (max-width:1500px)) {
+
+    #a1 {
+        margin-left: 54%;
+    }
+
+    .card{
+        width: 35%;
+        height: 25%;
+        display: inline-flex;
+        margin: 5% 0 0 10%;
+    }
+
+    #row{
+        display: inline-flex;
+    }
+
+}
+
+@media only screen and ((min-width: 992px) and (max-width: 1200px)) {
+    #a1 {
+        margin-left: 52%;
+    }
+
+    .card{
+        width: 35%;
+        height: 25%;
+        display: inline-flex;
+        margin: 5% 0 0 10%;
+    }
+
+    #row{
+        display: inline-flex;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    #a1 {
+        margin-left: 41%;
+    }
+
+    .card{
+        width: 42%;
+        height: 45%;
+        display: inline-flex;
+        margin: 5% 0 0 5%;
+    }
+
+    #row{
+        display: inline-flex;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    #a1 {
+        margin-left: 25px;
+    }
+
+    #a2 {
+        margin-left: 25px;
+    }
+    
+    #a3 {
+        margin-left: 25px;
+    }
+    
+    #login {
+        margin-left: 25px;
+    }
+
+    .card{
+        width: 80%;
+        height: 35%;
+        display: inline-block;
+        margin: 5% 0 0 10%;
+    }
+
+    #row{
+        display: inline-block;
+    }
+
+
+}
+
 </style>
 
 <body>
 
-<div class="menu">
+<body>
+
+    <div class="menu">
         <a id="a1" href="Home.jsp">HOME</a>
         <a id="a2" href="Cruceros.jsp">CRUCEROS</a>
         <a id="a3" href="Rutas.jsp">RUTAS</a>
@@ -211,58 +340,28 @@ body {
 
     <br><br><br><br><br>
 
-    <div id="row">
-        <div class="card bg-dark text-white">
-            <img src="https://www.disfrutandosingluten.es/wp-content/uploads/2020/02/Un-crucero-en-familia.jpg"
-                class="card-img" alt="...">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                <p class="card-text">Last updated 3 mins ago</p>
-                <a href="#" class="btn btn-primary">Ver Rutas</a>
-            </div>
-        </div>
+    
+    <video width="100%" height="auto" autoplay loop muted>
+        <source src="imgs/Conoce MSC Seashore.mp4" type="video/mp4">
+    </video>
 
-        <div class="card bg-dark text-white">
-            <img src="https://www.valemany.com/blog/wp-content/uploads/theworld.jpg" class="card-img" alt="">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                <p class="card-text">Last updated 3 mins ago</p>
-                <a href="#" class="btn btn-primary">Ver Rutas</a>
-            </div>
-        </div>
-    </div>
+    <br><br><br><br><br><br>
 
-    <br><br><br>
+    <h2>Selecciona tu crucero</h2>
 
-    <div id="row">
+    <br><br><br><br><br><br>
+    
+    
+    <c:forEach items="${cruceros}" var="crucero">
+    
         <div class="card bg-dark text-white">
-            <img src="https://www.porttarragona.cat/images/Port_Ciutat/Ciutat_creuers/cruceros2.jpg" class="card-img"
-                alt="...">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                <p class="card-text">Last updated 3 mins ago</p>
-                <a href="#" class="btn btn-primary">Ver Rutas</a>
-            </div>
+           <img src="https://www.disfrutandosingluten.es/wp-content/uploads/2020/02/Un-crucero-en-familia.jpg"
+                class="card-img" >
+                <a href="BuscadorDestino?destino=malta"><div class="card-img-overlay">
+                <h4 class="card-text">${crucero.nombre}</h4>
+            </div></a>
         </div>
-
-        <div class="card bg-dark text-white">
-            <img src="https://www.thenewbarcelonapost.com/wp-content/uploads/2021/06/MSC-grandiosa-1-1170x877.jpg"
-                class="card-img" alt="...">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                <p class="card-text">Last updated 3 mins ago</p>
-                <a href="#" class="btn btn-primary">Ver Rutas</a>
-            </div>
-        </div>
-    </div>
+ </c:forEach>
 
     <br><br><br>
     <footer class="footer">
