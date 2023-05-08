@@ -33,17 +33,27 @@ body {
 	padding-top: 25px;
 }
 
+.menu a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+    border: 2px solid rgba(0, 0, 0, 0);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
 #a1, #a2, #a3 {
     margin: 10px 0 0 25px;
   }
 
-#login {
-	margin-left: 50px;
-	border: 2px solid black;
-	padding: 5px;
-	border-radius: 10px;
-	margin-top: 15px;
-}
+ #login {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    margin: -7px 10px 0 0;
+    float: right;
+  }
 
 .card {
 	display: inline-flex;
@@ -120,147 +130,125 @@ body {
 }
 
 .footer {
-	position: relative;
-	width: 100%;
-	background: #3586ff;
-	min-height: 100px;
-	padding: 20px 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-top: 125px;
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 125px;
 }
 
-.social-icon, #menu {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 10px 0;
-	flex-wrap: wrap;
+.social-icon,
+#menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
 }
 
-.social-icon__item, .menu__item {
-	list-style: none;
+.social-icon__item,
+.menu__item {
+    list-style: none;
 }
 
 .social-icon__link {
-	font-size: 2rem;
-	color: #fff;
-	margin: 0 10px;
-	display: inline-block;
-	transition: 0.5s;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
 }
 
 .social-icon__link:hover {
-	transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .menu__link {
-	font-size: 1.2rem;
-	color: #fff;
-	margin: 0 10px;
-	display: inline-block;
-	transition: 0.5s;
-	text-decoration: none;
-	opacity: 0.75;
-	font-weight: 300;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
 }
 
 .menu__link:hover {
-	opacity: 1;
+    opacity: 1;
 }
 
 .footer p {
-	color: #fff;
-	margin: 15px 0 10px 0;
-	font-size: 1rem;
-	font-weight: 300;
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .wave {
-	position: absolute;
-	top: -100px;
-	left: 0;
-	width: 100%;
-	height: 100px;
-	background: url("https://i.ibb.co/wQZVxxk/wave.png");
-	background-size: 1000px 100px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
 }
 
 .wave#wave1 {
-	z-index: 1000;
-	opacity: 1;
-	bottom: 0;
-	animation: animateWaves 4s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
 }
 
 .wave#wave2 {
-	z-index: 999;
-	opacity: 0.5;
-	bottom: 10px;
-	animation: animate 4s linear infinite !important;
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
 }
 
 .wave#wave3 {
-	z-index: 1000;
-	opacity: 0.2;
-	bottom: 15px;
-	animation: animateWaves 3s linear infinite;
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
 }
 
 .wave#wave4 {
-	z-index: 999;
-	opacity: 0.7;
-	bottom: 20px;
-	animation: animate 3s linear infinite;
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
 }
 
-@
-keyframes animateWaves { 0% {
-	background-position-x: 1000px;
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
 }
 
-100
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
 
-
-%
-{
-background-positon-x
-
-
-:
-
-
-0px
-;
-
-
-}
-}
-@
-keyframes animate { 0% {
-	background-position-x: -1000px;
+    100% {
+        background-positon-x: 0px;
+    }
 }
 
-100
-
-
-%
-{
-background-positon-x
-
-
-:
-
-
-0px
-;
-
-
-}
-}
 .open-hide {
 	background-color: #0586ff;
 	color: white;
@@ -442,8 +430,8 @@ background-positon-x
 
 <body>
 	<div class="menu">
-		<a id="a1" href="Home.jsp">HOME</a> <a id="a2" href="Cruceros.jsp">CRUCEROS</a>
-		<a id="a3" href="Rutas.jsp">RUTAS</a> <a id="login" href=FormLogin.jsp>LOG
+		<a id="a1" href="Home.jsp">HOME</a> <a id="a2" href="VerCrucerosClientes">CRUCEROS</a>
+		<a id="a3" href="BuscadorDestino?destino=todas">RUTAS</a> <a id="login" href=FormLogin.jsp>LOG
 			IN</a>
 	</div>
 
@@ -470,7 +458,9 @@ background-positon-x
 			src="https://www.crucerosmediterraneo.com/descubre/wp-content/uploads/Como-son-los-camarotes-de-un-crucero-1024x687.jpg"
 			alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">399.99</h5>
+			<h5 class="card-title">399.99<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+  <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
+</svg></h5>
 			<p class="card-text">Suit barata.</p>
 		</div>
 	</div>
@@ -481,12 +471,13 @@ background-positon-x
 			<div class="card-body">
 				<h5 class="card-title">Destino ${ruta.destino}</h5>
 				<h6 class="card-subtitle mb-2 text-muted">Origen ${ruta.origen}</h6>
-				<p class="card-text">El crucero es el Royal Mary el viaje es de
-					10 días.</p>
+				<p class="card-text">Desde el ${ruta.fecha_ini} hasta el ${ruta.fecha_fin}</p>
 				<div class="scene">
 					<div class="cube">
-						<span class="side top"><a href="ReservarRuta.jsp">Reservar</a></span>
-						<span class="side front">${ruta.precio}</span>
+						<span class="side top"><a href="ReservarRuta?id_ruta=${ruta.id_ruta}">Reservar</a></span>
+						<span class="side front">${ruta.precio}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+  <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
+</svg></span>
 					</div>
 				</div>
 			</div>
@@ -497,40 +488,39 @@ background-positon-x
 
 
 	<footer class="footer">
-		<div class="waves">
-			<div class="wave" id="wave1"></div>
-			<div class="wave" id="wave2"></div>
-			<div class="wave" id="wave3"></div>
-			<div class="wave" id="wave4"></div>
-		</div>
-		<ul class="social-icon">
-			<li class="social-icon__item"><a class="social-icon__link"
-				href="#"> <ion-icon name="logo-facebook"></ion-icon>
-			</a></li>
-			<li class="social-icon__item"><a class="social-icon__link"
-				href="#"> <ion-icon name="logo-twitter"></ion-icon>
-			</a></li>
-			<li class="social-icon__item"><a class="social-icon__link"
-				href="#"> <ion-icon name="logo-linkedin"></ion-icon>
-			</a></li>
-			<li class="social-icon__item"><a class="social-icon__link"
-				href="#"> <ion-icon name="logo-instagram"></ion-icon>
-			</a></li>
-		</ul>
-		<ul id="menu">
-			<li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-			<li class="menu__item"><a class="menu__link" href="#">About</a></li>
-			<li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-			<li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-			<li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul id="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2023 Iker Beñat | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-		</ul>
-		<p>&copy;2023 Iker Beñat | All Rights Reserved</p>
-	</footer>
-	<script type="module"
-		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule
-		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>

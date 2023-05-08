@@ -44,16 +44,6 @@ section img:hover {
     filter: contrast(140%);
 }
 
-.menu a {
-    text-decoration: none;
-    color: black;
-    opacity: 0.8;
-    border: 2px solid rgba(0, 0, 0, 0);
-    padding: 5px;
-    border-radius: 10px;
-    transition: .3s;
-}
-
 .menu a:hover {
     background-color: #0062ff;
     box-shadow: 0 0 0 5px #1f75ff5f;
@@ -71,6 +61,16 @@ section img:hover {
     z-index: 100;
 }
 
+.menu a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+    border: 2px solid rgba(0, 0, 0, 0);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
 #a1, #a2, #a3 {
     margin: 10px 0 0 25px;
   }
@@ -82,6 +82,7 @@ section img:hover {
     margin: -7px 10px 0 0;
     float: right;
   }
+  
 .footer {
     position: relative;
     width: 100%;
@@ -553,7 +554,7 @@ section img:hover {
 	 <div class="menu">
     <a id="a1" href="Home.jsp">HOME</a>
     <a id="a2" href="VerCrucerosClientes">CRUCEROS</a>
-    <a id="a3" href="Rutas.jsp">RUTAS</a>
+    <a id="a3" href="BuscadorDestino?destino=todas">RUTAS</a>
     <a id="login" href="LogIn.jsp">LOG IN</a>
   </div>
 

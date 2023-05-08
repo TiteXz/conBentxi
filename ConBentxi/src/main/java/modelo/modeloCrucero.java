@@ -27,6 +27,7 @@ public class modeloCrucero extends Conexion{
 				crucero.setCapitan(resultado.getString("capitan"));
 				crucero.setCategoria(resultado.getString("categoria"));
 				crucero.setId_ruta(resultado.getInt("id_ruta"));
+				crucero.setImagen(resultado.getString("imagen"));
 				
 				cruceros.add(crucero);
 			}
@@ -55,11 +56,27 @@ public class modeloCrucero extends Conexion{
 			crucero.setCategoria(resultado.getString("categoria"));
 			crucero.setId_ruta(resultado.getInt("id_ruta"));
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
 		return crucero;
+	}
+	
+	public int getId_Crucero(int id_ruta) {
+		PreparedStatement pst;
+		
+		try {
+			pst = conexion.prepareStatement("SELECT * FROM cruceros WHERE id_ruta = ?");
+		pst.setInt(1, id_ruta);
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		return id_ruta;
+		
+		
 	}
 
 	public void ainadirCrucero(Crucero crucero) {

@@ -1,8 +1,6 @@
 package controladores;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -15,16 +13,16 @@ import clases.Ruta;
 import modelo.modeloRuta;
 
 /**
- * Servlet implementation class BuscadorDestino
+ * Servlet implementation class BuscadorId
  */
-@WebServlet("/BuscadorDestino")
-public class BuscadorDestino extends HttpServlet {
+@WebServlet("/BuscadorId")
+public class BuscadorId extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BuscadorDestino() {
+    public BuscadorId() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,33 +33,20 @@ public class BuscadorDestino extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		
-		//datuak jaso
-		
-		String destino = request.getParameter("destino");
+		int id_ruta = Integer.parseInt(request.getParameter("id_ruta"));
 		
 		modeloRuta mR = new modeloRuta();
 		
 		
-		if(destino.equals("todas")) {
-			mR.Conectar();
-			ArrayList<Ruta> Todasrutas = mR.getRutas();
-			mR.cerrar();
-			request.setAttribute("rutas", Todasrutas);
-			request.getRequestDispatcher("Rutas.jsp").forward(request, response);
-		}else if(destino==null) {
-			mR.Conectar();
-			ArrayList<Ruta> rutas = mR.buscarRutasNombre(destino);
-			mR.cerrar();
-			request.setAttribute("rutas", rutas);
+		mR.Conectar();
+		ArrayList<Ruta> rutas = mR.buscarRutasId(id_ruta);
+		mR.cerrar();
+		
+		request.setAttribute("rutas", rutas);
+		if(rutas==null) {
 			request.getRequestDispatcher("RutasNada.jsp").forward(request, response);
-		}else if(destino!=null) {
-			mR.Conectar();
-			ArrayList<Ruta> rutas = mR.buscarRutasNombre(destino);
-			mR.cerrar();
-			request.setAttribute("rutas", rutas);
-			request.getRequestDispatcher("Rutas.jsp").forward(request, response);
-		}
+		}else
+		request.getRequestDispatcher("Rutas.jsp").forward(request, response);
 	}
 
 	/**

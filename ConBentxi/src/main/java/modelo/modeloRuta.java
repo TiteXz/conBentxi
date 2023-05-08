@@ -42,12 +42,12 @@ public class modeloRuta extends Conexion{
 		}
 	}
 
-	public ArrayList<Ruta> buscarRutas(String destino){
+	public ArrayList<Ruta> buscarRutasNombre(String destino){
 		ArrayList<Ruta>rutas = new ArrayList<Ruta>();
 		
 		try {
-			PreparedStatement pst = conexion.prepareStatement("Select * FROM rutas WHERE destino = ?");
-			pst.setString(1, destino);
+			PreparedStatement pst = conexion.prepareStatement("Select * FROM rutas WHERE destino LIKE ?");
+			pst.setString(1, "%" + destino + "%");
 			
 			ResultSet resultado = pst.executeQuery();
 			
@@ -72,6 +72,38 @@ public class modeloRuta extends Conexion{
 		return rutas;
 		
 	}
+	
+	public ArrayList<Ruta> buscarRutasId(int id_ruta) {
+		
+		ArrayList<Ruta>rutas = new ArrayList<Ruta>();
+		
+		try {
+			PreparedStatement pst = conexion.prepareStatement("Select * FROM rutas WHERE id_ruta = ?");
+			pst.setInt(1, id_ruta);
+			
+			ResultSet resultado = pst.executeQuery();
+			
+			while(resultado.next()) {
+				Ruta ruta = new Ruta();
+				
+				ruta.setId_ruta(resultado.getInt("id_ruta"));
+				ruta.setFecha_ini(resultado.getDate("fecha_ini"));
+				ruta.setFecha_fin(resultado.getDate("fecha_fin"));
+				ruta.setOrigen(resultado.getString("origen"));
+				ruta.setDestino(resultado.getString("destino"));
+				ruta.setPrecio(resultado.getDouble("precio"));
+				
+				rutas.add(ruta);
+				
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return rutas;
+		
+	}
+	
 	
 	public ArrayList<Ruta> getRutas() {
 		ArrayList<Ruta> rutas = new ArrayList<Ruta>();
@@ -98,6 +130,34 @@ public class modeloRuta extends Conexion{
 		}
 		
 		return rutas;
+	}
+	
+	public Ruta getRuta(int id_ruta) {
+		Ruta ruta = new Ruta();
+		
+		try {
+			PreparedStatement pst = conexion.prepareStatement("SELECT * FROM rutas WHERE id_ruta = ?");
+			
+			pst.setInt(1, id_ruta);
+			
+			ResultSet resultado = pst.executeQuery();
+			
+			resultado.next();
+			ruta.setId_ruta(resultado.getInt("id_ruta"));
+			ruta.setFecha_ini(resultado.getDate("fecha_ini"));
+			ruta.setFecha_fin(resultado.getDate("fecha_fin"));
+			ruta.setOrigen(resultado.getString("origen"));
+			ruta.setDestino(resultado.getString("destino"));
+			ruta.setPrecio(resultado.getDouble("precio"));
+			
+			
+				
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return ruta;
 	}
 	
 	public void modificarRuta(Ruta ruta) {

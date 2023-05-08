@@ -52,28 +52,17 @@ body {
     transition: .3s;
 }
 
-#a1 {
-    margin-left: 1450px;
-    margin-top: 15px;
-}
+#a1, #a2, #a3 {
+    margin: 10px 0 0 25px;
+  }
 
-#a2 {
-    margin-left: 50px;
-    margin-top: 15px;
-}
-
-#a3 {
-    margin-left: 50px;
-    margin-top: 15px;
-}
-
-#login {
-    margin-left: 50px;
+ #login {
     border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
-    margin-top: 15px;
-}
+    margin: -7px 10px 0 0;
+    float: right;
+  }
 
 .card {
     height: 451px;
@@ -220,10 +209,6 @@ h2{
 
 @media only screen and (min-width: 1501px) {
 
-    #a1 {
-        margin-left: 70%;
-    }
-
     .card{
         width: 20%;
         height: 15%;
@@ -239,10 +224,6 @@ h2{
 
 @media only screen and ((min-width: 1201px) and (max-width:1500px)) {
 
-    #a1 {
-        margin-left: 54%;
-    }
-
     .card{
         width: 35%;
         height: 25%;
@@ -257,9 +238,6 @@ h2{
 }
 
 @media only screen and ((min-width: 992px) and (max-width: 1200px)) {
-    #a1 {
-        margin-left: 52%;
-    }
 
     .card{
         width: 35%;
@@ -277,10 +255,6 @@ h2{
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-    #a1 {
-        margin-left: 41%;
-    }
-
     .card{
         width: 42%;
         height: 45%;
@@ -295,17 +269,6 @@ h2{
 
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 767px) {
-    #a1 {
-        margin-left: 25px;
-    }
-
-    #a2 {
-        margin-left: 25px;
-    }
-    
-    #a3 {
-        margin-left: 25px;
-    }
     
     #login {
         margin-left: 25px;
@@ -334,7 +297,7 @@ h2{
     <div class="menu">
         <a id="a1" href="Home.jsp">HOME</a>
         <a id="a2" href="Cruceros.jsp">CRUCEROS</a>
-        <a id="a3" href="Rutas.jsp">RUTAS</a>
+        <a id="a3" href="BuscadorDestino?destino=todas">RUTAS</a>
         <a id="login" href="FormLogin.jsp">LOG IN</a>
     </div>
 
@@ -355,9 +318,9 @@ h2{
     <c:forEach items="${cruceros}" var="crucero">
     
         <div class="card bg-dark text-white">
-           <img src="https://www.disfrutandosingluten.es/wp-content/uploads/2020/02/Un-crucero-en-familia.jpg"
+           <img src="${crucero.imagen}"
                 class="card-img" >
-                <a href="BuscadorDestino?destino=malta"><div class="card-img-overlay">
+                <a href="BuscadorId?id_ruta=${crucero.id_ruta}"><div class="card-img-overlay">
                 <h4 class="card-text">${crucero.nombre}</h4>
             </div></a>
         </div>

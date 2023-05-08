@@ -4,22 +4,20 @@ public class Habitacion {
 	private int numero_habita;
 	private String	descripcion; 
 	private double precio;
-	private int id_crucero; 
-	private String dni_cliente;
+	private int id_crucero;
 	private int id_empleado;
 	private String imagen;
 	
 	
 	public Habitacion() {}
 
-	public Habitacion(int numero_habita, String descripcion, double precio, int id_crucero, String dni_cliente,
+	public Habitacion(int numero_habita, String descripcion, double precio, int id_crucero,
 			int id_empleado, String imagen) {
 		super();
 		this.numero_habita = numero_habita;
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.id_crucero = id_crucero;
-		this.dni_cliente = dni_cliente;
 		this.id_empleado = id_empleado;
 		this.imagen = imagen;
 	}
@@ -54,14 +52,6 @@ public class Habitacion {
 
 	public void setId_crucero(int id_crucero) {
 		this.id_crucero = id_crucero;
-	}
-
-	public String getDni_cliente() {
-		return dni_cliente;
-	}
-
-	public void setDni_cliente(String dni_cliente) {
-		this.dni_cliente = dni_cliente;
 	}
 
 	public int getId_empleado() {
