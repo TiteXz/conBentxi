@@ -32,7 +32,8 @@ public class HacerReserva extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		//datuak jaso
-		String dni = request.getParameter("dni");
+		String nombreCrucero = request.getParameter("nombreCrucero");
+		String dni = request.getParameter("dniCliente");
 		String nombre = request.getParameter("nombre");
 		String apellido = request.getParameter("apellido");
 		Boolean mayor_edad = request.getParameter("mayor_edad") == null? false :true;

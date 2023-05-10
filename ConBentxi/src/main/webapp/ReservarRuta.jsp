@@ -372,7 +372,7 @@ transform: scaleY(120%);
             <form method="get" action="HacerReserva">
                 <div class="form-group col-md-6">
                     <label for="inputDni">Dni</label>
-                    <input type="text" class="form-control" id="dniCliente" placeholder="12345678A">
+                    <input type="text" class="form-control" id="dniCliente" placeholder="DNI">
                 </div>
 
                 <div class="form-row">
