@@ -33,14 +33,6 @@ public class InsertarRuta extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		//datuak jaso
 				SimpleDateFormat fecha_ini = new SimpleDateFormat("yyyy-MM-dd");
 				SimpleDateFormat fecha_fin = new SimpleDateFormat("yyyy-MM-dd");
@@ -67,6 +59,14 @@ public class InsertarRuta extends HttpServlet {
 				
 				//insertatu ondoren 
 				response.sendRedirect("VerRutas");
+			}
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

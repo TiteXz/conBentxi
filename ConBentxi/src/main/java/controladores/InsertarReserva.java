@@ -38,6 +38,7 @@ public class InsertarReserva extends HttpServlet {
 		int id_crucero = Integer.parseInt(request.getParameter("id_crucero"));
 		SimpleDateFormat fecha_ini = new SimpleDateFormat("yyyy-MM-dd");
 		SimpleDateFormat fecha_fin = new SimpleDateFormat("yyyy-MM-dd");
+		int numero_habitacion = Integer.parseInt(request.getParameter("numero_habitacion"));
 		
 		Reserva reserva = new Reserva();
 		
@@ -50,6 +51,7 @@ public class InsertarReserva extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		reserva.setNumero_habitacion(numero_habitacion);
 		
 		mR.Conectar();
 		mR.ainadirReserva(reserva);

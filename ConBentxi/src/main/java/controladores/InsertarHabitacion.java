@@ -36,6 +36,7 @@ public class InsertarHabitacion extends HttpServlet {
 		int id_crucero = Integer.parseInt(request.getParameter("id_crucero"));
 		int id_empleado = Integer.parseInt(request.getParameter("id_empleado"));
 		String imagen = request.getParameter("imagen");
+		String dni_cliente = request.getParameter("dni_cliente");
 		
 		Habitacion habitacion = new Habitacion();
 		
@@ -44,6 +45,7 @@ public class InsertarHabitacion extends HttpServlet {
 		habitacion.setId_crucero(id_crucero);
 		habitacion.setId_empleado(id_empleado);
 		habitacion.setImagen(imagen);
+		habitacion.setDni_cliente(dni_cliente);
 		
 		mH.Conectar();
 		mH.ainadirHabitacion(habitacion);

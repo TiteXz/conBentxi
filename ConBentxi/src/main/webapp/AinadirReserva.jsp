@@ -242,6 +242,8 @@ nav ul {
 								name="fecha_ini" />Fecha inicio</label> <br> <br>
 							<label><input required="required" type="date" id="fecha_fin"
 								name="fecha_fin" />Fecha fin</label> <br> <br>
+							<label><input required="required" type="number" id="numero_habitacion" name="numero_habitacion"
+								placeholder="numero_habitacion" /></label> <br> <br>
 							<input id="LogIn" type="submit" value="CREAR" />
 						</form>
 					</div>

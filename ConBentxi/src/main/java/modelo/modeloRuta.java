@@ -13,7 +13,7 @@ public class modeloRuta extends Conexion{
 	public void ainadirRuta(Ruta ruta) {
 		
 		try {
-			PreparedStatement pst = conexion.prepareStatement("INSERT INTO rutas ( fecha_ini, fecha_fin, origen, destino) VALUES (?,?,?,?)");
+			PreparedStatement pst = conexion.prepareStatement("INSERT INTO rutas (fecha_ini, fecha_fin, origen, destino) VALUES (?,?,?,?)");
 			pst.setDate(1, new Date(ruta.getFecha_ini().getTime()));
 			pst.setDate(2, new Date(ruta.getFecha_fin().getTime()));
 			pst.setString(3, ruta.getOrigen());

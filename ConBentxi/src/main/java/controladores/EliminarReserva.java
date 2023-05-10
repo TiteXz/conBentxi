@@ -31,9 +31,10 @@ public class EliminarReserva extends HttpServlet {
 		modeloReserva mR = new modeloReserva();
 		String dni_cliente = request.getParameter("dni_cliente");
 		int id_crucero = Integer.parseInt(request.getParameter("id_crucero"));
+		int numero_habitacion = Integer.parseInt(request.getParameter("numero_habitacion"));
 		
 		mR.Conectar();
-		mR.eliminarReserva(dni_cliente, id_crucero);
+		mR.eliminarReserva(dni_cliente, id_crucero, numero_habitacion);
 		mR.cerrar();
 		
 		response.sendRedirect("VerReservas");

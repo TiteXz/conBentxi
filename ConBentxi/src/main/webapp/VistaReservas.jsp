@@ -178,6 +178,7 @@ a:hover {
 					<th><span>id_crucero</span></th>
 					<th><span>fecha_ini</span></th>
 					<th><span>fecha_fin</span></th>
+					<th><span>numero_habitacion</span></th>
 					<th><span></span></th>
 				</tr>
 			</thead>
@@ -188,7 +189,8 @@ a:hover {
 	      <td>${reservas.id_crucero}</td>
 	      <td>${reservas.fecha_ini}</td>
 	      <td>${reservas.fecha_fin}</td>
-	      <td><a class= "eliminar" href="EliminarReserva?dni_cliente=${reservas.dni_cliente}&id_crucero=${reservas.id_crucero}">Eliminar </a> </td>
+	      <td>${reservas.numero_habitacion}</td>
+	      <td><a class= "eliminar" href="EliminarReserva?dni_cliente=${reservas.dni_cliente}&id_crucero=${reservas.id_crucero}&numero_habitacion=${reservas.numero_habitacion}">Eliminar </a> </td>
 	    </tr>
 	  </c:forEach>
   </tbody>

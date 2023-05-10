@@ -13,7 +13,7 @@ public class modeloHabitacion extends Conexion {
 		 ArrayList<Habitacion> habitaciones = new ArrayList<Habitacion>();
 		
 		try {
-			PreparedStatement pst = conexion.prepareStatement("SELECT FROM habitaciones");
+			PreparedStatement pst = conexion.prepareStatement("SELECT * FROM habitaciones");
 			
 			ResultSet resultado = pst.executeQuery();
 			
@@ -104,13 +104,15 @@ public class modeloHabitacion extends Conexion {
 	
 	public void modificarHabitacion(Habitacion habitacion) {
 		try {
-			PreparedStatement pst = conexion.prepareStatement("UPDATE habitaciones SET descripcion = ?, precio = ?, imagen = ?, dni_cliente = ? WHERE numero_habitacion = ?");
+			PreparedStatement pst = conexion.prepareStatement("UPDATE habitaciones SET descripcion = ?, precio = ?, id_crucero = ?, id_empleado = ?, imagen = ?, dni_cliente = ? WHERE numero_habitacion = ?");
 			
 			pst.setString(1, habitacion.getDescripcion());
 			pst.setDouble(2, habitacion.getPrecio());
-			pst.setString(3, habitacion.getImagen());
-			pst.setString(4, habitacion.getDni_cliente());
-			pst.setInt(5, habitacion.getNumero_habitacion());
+			pst.setInt(3, habitacion.getId_crucero());
+			pst.setInt(4, habitacion.getId_empleado());
+			pst.setString(5, habitacion.getImagen());
+			pst.setString(6, habitacion.getDni_cliente());
+			pst.setInt(7, habitacion.getNumero_habitacion());
 			
 			pst.execute();
 		} catch (SQLException e) {

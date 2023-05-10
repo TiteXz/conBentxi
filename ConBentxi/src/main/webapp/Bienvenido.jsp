@@ -157,6 +157,10 @@ button:hover {
   <a href="VerInscripciones">INSCRIPCIONES</a> 
 </button>
 
+<button>
+  <a href="VerPuertos">PUERTOS</a>
+</button>
+
 </div>
 
 </body>

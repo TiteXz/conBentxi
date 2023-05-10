@@ -164,7 +164,7 @@ a:hover {
 		<div id="logout"> <a href="AbrirLogin">Log out</a></div>
 
 		<ul id="menu">
-			<li><a href="AinadirParadas.jsp" title="CREAR">CREAR</a></li>
+			<li><a href="AinadirParada.jsp" title="CREAR">CREAR</a></li>
 			<li><a href="Bienvenido.jsp" title="VISTAS">VISTAS</a></li>
 		</ul>
 

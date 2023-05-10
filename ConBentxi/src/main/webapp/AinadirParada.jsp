@@ -182,7 +182,7 @@ nav ul {
 							<label><input required="required" type="text" id="ciudad" name="ciudad"
 								placeholder="ciudad" /></label> <br> <br> <label><input required="required"
 								type="text" id="pais" name="pais" placeholder="país" /></label> <br>
-							<br> <label><input required="required" type="text"
+							<br> <label><input required="required" type="number"
 								id="tiempo_estacionamiento" name="tiempo_estacionamiento"
 								placeholder="Tiempo estacionado" /></label> <br> <br> <label><input required="required"
 								type="date" id="fecha_salida" name="fecha_salida" />fecha salida</label>

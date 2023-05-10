@@ -189,7 +189,7 @@ nav ul {
 							<label>Precio: <input type="text" id="precio" name="precio" value="${habitacion.precio}"/></label>
 							<br>
 							<br> 
-							<label>Id crucero:<input type="number" id="id_crucero" name="id_crucero" value="${habitacion.id_crucero}"/></label> <br>
+							<label>Id crucero:<input readonly type="number" id="id_crucero" name="id_crucero" value="${habitacion.id_crucero}"/></label> <br>
 							<br> 
 							<label>Dni cliente: <input type="text" id="dni_cliente" name="dni_cliente" value="${habitacion.dni_cliente}" /></label>
 							<br>

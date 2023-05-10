@@ -30,23 +30,29 @@ public class ModificarHabitacion extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		modeloHabitacion mH = new modeloHabitacion();
-		
+
 		int numero_habitacion = Integer.parseInt(request.getParameter("numero_habitacion"));
 		String descripcion = request.getParameter("descripcion");
 		double precio = Double.parseDouble(request.getParameter("precio"));
+		int id_crucero = Integer.parseInt(request.getParameter("id_crucero"));
+		int id_empleado = Integer.parseInt(request.getParameter("id_empleado"));
 		String imagen = request.getParameter("imagen");
-		
+		String dni_cliente = request.getParameter("dni_cliente");
+
 		Habitacion habitacion = new Habitacion();
-		
+
 		habitacion.setNumero_habitacion(numero_habitacion);
 		habitacion.setDescripcion(descripcion);
 		habitacion.setPrecio(precio);
+		habitacion.setId_crucero(id_crucero);
+		habitacion.setId_empleado(id_empleado);
 		habitacion.setImagen(imagen);
-		
+		habitacion.setDni_cliente(dni_cliente);
+
 		mH.Conectar();
 		mH.modificarHabitacion(habitacion);
 		mH.cerrar();
-		
+
 		request.getRequestDispatcher("VerHabitaciones").forward(request, response);
 	}
 

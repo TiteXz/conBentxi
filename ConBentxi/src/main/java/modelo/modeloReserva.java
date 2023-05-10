@@ -12,12 +12,13 @@ public class modeloReserva extends Conexion{
 
 	public void ainadirReserva(Reserva reserva) {
 		try {
-			PreparedStatement pst = conexion.prepareStatement("INSERT INTO reservas (dni_cliente, id_crucero, fecha_ini, fecha_fin) VALUES (?, ?, ?, ?)");
+			PreparedStatement pst = conexion.prepareStatement("INSERT INTO reservas (dni_cliente, id_crucero, fecha_ini, fecha_fin, numero_habitacion) VALUES (?, ?, ?, ?, ?)");
 			
 			pst.setString(1, reserva.getDni_cliente());
 			pst.setInt(2, reserva.getId_crucero());
 			pst.setDate(3, new Date(reserva.getFecha_ini().getTime()));
 			pst.setDate(4, new Date(reserva.getFecha_fin().getTime()));
+			pst.setInt(5, reserva.getNumero_habitacion());
 			
 			pst.execute();
 		} catch (SQLException e) {
@@ -26,12 +27,13 @@ public class modeloReserva extends Conexion{
 		}
 	}
 	
-	public void eliminarReserva(String dni_cliente, int id_crucero) {
+	public void eliminarReserva(String dni_cliente, int id_crucero, int numero_habitacion) {
 		try {
-			PreparedStatement pst = conexion.prepareStatement("DELETE FROM reservas WHERE dni_cliente = ? AND id_crucero = ?");
+			PreparedStatement pst = conexion.prepareStatement("DELETE FROM reservas WHERE dni_cliente = ? AND id_crucero = ? AND numero_habitacion = ?");
 			
 			pst.setString(1, dni_cliente);
 			pst.setInt(2, id_crucero);
+			pst.setInt(3, numero_habitacion);
 			
 			pst.execute();
 		} catch (SQLException e) {
@@ -54,6 +56,7 @@ public class modeloReserva extends Conexion{
 				reserva.setId_crucero(resultado.getInt("id_crucero"));
 				reserva.setFecha_ini(resultado.getDate("fecha_ini"));
 				reserva.setFecha_fin(resultado.getDate("fecha_fin"));
+				reserva.setNumero_habitacion(resultado.getInt("numero_habitacion"));
 				
 				reservas.add(reserva);
 			}
