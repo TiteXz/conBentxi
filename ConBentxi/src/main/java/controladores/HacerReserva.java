@@ -53,7 +53,7 @@ public class HacerReserva extends HttpServlet {
 		mC.ainadirUsuario(cliente);
 		mC.cerrar();
 		
-		request.getRequestDispatcher("ReservarRuta.jsp").forward(request, response);
+		request.getRequestDispatcher("Terminado.jsp").forward(request, response);
 	}
 
 	/**

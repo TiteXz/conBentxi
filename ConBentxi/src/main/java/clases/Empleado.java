@@ -12,8 +12,7 @@ public class Empleado {
 	
 	public Empleado() {}
 
-	public Empleado(int id_empleado, String nombre, String apellido, String trabajo, int id_crucero, String usuario,
-			String password) {
+	public Empleado(int id_empleado, String nombre, String apellido, String trabajo, int id_crucero, String usuario, String password) {
 		super();
 		this.id_empleado = id_empleado;
 		this.nombre = nombre;
@@ -64,6 +63,12 @@ public class Empleado {
 		this.id_crucero = id_crucero;
 	}
 
+	@Override
+	public String toString() {
+		return "empleado [id_empleado=" + id_empleado + ", nombre=" + nombre + ", apellido=" + apellido + ", trabajo="
+				+ trabajo + ", id_crucero=" + id_crucero + "]";
+	}
+
 	public String getUsuario() {
 		return usuario;
 	}
@@ -79,14 +84,6 @@ public class Empleado {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	@Override
-	public String toString() {
-		return "Empleado [id_empleado=" + id_empleado + ", nombre=" + nombre + ", apellido=" + apellido + ", trabajo="
-				+ trabajo + ", id_crucero=" + id_crucero + ", usuario=" + usuario + ", password=" + password + "]";
-	}
-
-	
 	
 	
 

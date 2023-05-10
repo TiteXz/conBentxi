@@ -13,13 +13,11 @@ public class modeloRuta extends Conexion{
 	public void ainadirRuta(Ruta ruta) {
 		
 		try {
-			PreparedStatement pst = conexion.prepareStatement("INSERT INTO rutas (id_ruta, fecha_ini, fecha_fin, origen, destino, precio) VALUES (?,?,?,?,?,?)");
-			pst.setInt(1, ruta.getId_ruta());
-			pst.setDate(2, new Date(ruta.getFecha_ini().getTime()));
-			pst.setDate(3, new Date(ruta.getFecha_fin().getTime()));
-			pst.setString(4, ruta.getOrigen());
-			pst.setString(5, ruta.getDestino());
-			pst.setDouble(6, ruta.getPrecio());
+			PreparedStatement pst = conexion.prepareStatement("INSERT INTO rutas ( fecha_ini, fecha_fin, origen, destino) VALUES (?,?,?,?)");
+			pst.setDate(1, new Date(ruta.getFecha_ini().getTime()));
+			pst.setDate(2, new Date(ruta.getFecha_fin().getTime()));
+			pst.setString(3, ruta.getOrigen());
+			pst.setString(4, ruta.getDestino());
 			
 			pst.execute();
 		} catch (SQLException e) {
@@ -59,7 +57,6 @@ public class modeloRuta extends Conexion{
 				ruta.setFecha_fin(resultado.getDate("fecha_fin"));
 				ruta.setOrigen(resultado.getString("origen"));
 				ruta.setDestino(resultado.getString("destino"));
-				ruta.setPrecio(resultado.getDouble("precio"));
 				
 				rutas.add(ruta);
 				
@@ -91,7 +88,6 @@ public class modeloRuta extends Conexion{
 				ruta.setFecha_fin(resultado.getDate("fecha_fin"));
 				ruta.setOrigen(resultado.getString("origen"));
 				ruta.setDestino(resultado.getString("destino"));
-				ruta.setPrecio(resultado.getDouble("precio"));
 				
 				rutas.add(ruta);
 				
@@ -121,7 +117,6 @@ public class modeloRuta extends Conexion{
 				ruta.setFecha_fin(resultado.getDate("fecha_fin"));
 				ruta.setOrigen(resultado.getString("origen"));
 				ruta.setDestino(resultado.getString("destino"));
-				ruta.setPrecio(resultado.getDouble("precio"));
 				
 				rutas.add(ruta);
 			}
@@ -148,9 +143,6 @@ public class modeloRuta extends Conexion{
 			ruta.setFecha_fin(resultado.getDate("fecha_fin"));
 			ruta.setOrigen(resultado.getString("origen"));
 			ruta.setDestino(resultado.getString("destino"));
-			ruta.setPrecio(resultado.getDouble("precio"));
-			
-			
 				
 			
 		} catch (SQLException e) {
@@ -160,16 +152,17 @@ public class modeloRuta extends Conexion{
 		return ruta;
 	}
 	
+	
+	
 	public void modificarRuta(Ruta ruta) {
 		try {
-			PreparedStatement pst = conexion.prepareStatement("UPDATE rutas SET fecha_ini=?, fecha_fin=?, origen=?, destino=?, precio=? WHERE id_ruta=?");
+			PreparedStatement pst = conexion.prepareStatement("UPDATE rutas SET fecha_ini=?, fecha_fin=?, origen=?, destino=? WHERE id_ruta=?");
 			
 			pst.setDate(1, new Date(ruta.getFecha_ini().getTime()));
 			pst.setDate(2, new Date(ruta.getFecha_fin().getTime()));
 			pst.setString(3, ruta.getOrigen());
 			pst.setString(4, ruta.getDestino());
-			pst.setDouble(5, ruta.getPrecio());
-			pst.setInt(6, ruta.getId_ruta());
+			pst.setInt(5, ruta.getId_ruta());
 			
 			pst.execute();
 		} catch (SQLException e) {

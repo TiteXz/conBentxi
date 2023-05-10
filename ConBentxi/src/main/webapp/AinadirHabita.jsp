@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Insertar actividad</title>
 </head>
 
 <style>
-p#tituloHabitacion {
+p#tituloActividad {
 	font-family: 'Courier New';
 	text-transform: uppercase;
 	margin-left: 835px;
@@ -164,11 +164,12 @@ nav ul {
 
 <body>
 
-	<P id="tituloHabitacion">habitaciones</P>
+	<P id="tituloActividad">actividades</P>
 
+	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
+	
 	<ul id="menu">
-		<li><a href="Crear.html" title="CREAR">CREAR</a></li>
-		<li><a href="Visualizar.html" title="VISUALIZAR">VISUALIZAR </a></li>
+		<li><a href="VerHabitaciones" title="VISTAS">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -177,26 +178,31 @@ nav ul {
 
 	<nav>
 		<ul>
-			<li><a><div id="formulario">
-						<form method="POST" action="AñadirHabitacion">
-							<label><input type="number" id="numero" name="numero"
-								placeholder="numero" /></label> <br> <br> <label><input
-								type="text" id="descri" name="descri" placeholder="descripción" /></label>
-							<br> <br> <label><input type="text" id="precio"
-								name="precio" placeholder="precio" /></label> <br> <br> <label><input
-								type="number" id="id_crucero" name="id_crucero"
-								placeholder="id_crucero" /></label> <br> <br> <label><input
-								type="text" id="dni" name="dni" placeholder="dni_cliente" /></label> <br>
-							<br> <label><input type="number" id="id_empleado"
+			<li><a>
+					<div id="formulario">
+						<form method="POST" action="InsertarHabitacion">
+							<label><input required="required" type="text" id="descripcion"
+								name="descripcion" placeholder="descripcion" /></label> <br> <br> <label><input
+								required="required" type="text" id="precio" name="precio" placeholder="precio" /></label> <br>
+							<br> <label><input required="required" type="number" id="id_crucero"
+								name="id_crucero" placeholder="id_crucero" /></label> <br> <br>
+							<label><input required="required" type="text" id="dni_cliente"
+								name="dni_cliente" placeholder="dni_cliente" /></label> <br> <br>
+							<label><input required="required" type="number" id="id_empleado"
 								name="id_empleado" placeholder="id_empleado" /></label> <br> <br>
+							<label><input required="required" type="text" id="imagen"
+								name="imagen" placeholder="imagen" /></label> <br> <br>
 							<input id="LogIn" type="submit" value="CREAR" />
 						</form>
-					</div></a></li>
-			<li><a><div id="formulario2">
+					</div>
+			</a></li>
+			<li><a>
+					<div id="formulario2">
 						<img
 							src="https://static.vecteezy.com/system/resources/previews/008/070/292/original/blue-boat-logo-symbol-illustration-free-vector.jpg"
 							alt="">
-					</div></a></li>
+					</div>
+			</a></li>
 		</ul>
 	</nav>
 

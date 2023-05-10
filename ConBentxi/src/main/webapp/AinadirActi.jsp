@@ -165,10 +165,11 @@ nav ul {
 <body>
 
 	<P id="tituloActividad">actividades</P>
+	
+	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
 
 	<ul id="menu">
-		<li><a href="Crear.html" title="CREAR">CREAR</a></li>
-		<li><a href="Visualizar.html" title="VISUALIZAR">VISUALIZAR </a></li>
+		<li><a href="Bievenido.jsp" title="VISUALIZAR">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -179,10 +180,8 @@ nav ul {
 		<ul>
 			<li><a>
 					<div id="formulario">
-						<form method="POST" action="AñadirActividad">
-							<label><input type="number" id="id_acti" name="id_acti"
-								placeholder="id_actividad" /></label> <br> <br> <label><input
-								type="text" id="nombre" name="nombre" placeholder="nombre" /></label> <br>
+						<form method="POST" action="InsertarActividad">
+							<label><input type="text" id="nombre" name="nombre" placeholder="nombre" /></label> <br>
 							<br> <label><input type="date" id="fecha_ini"
 								name="fecha_ini" />fecha_inicio</label> <br> <br> <label><input
 								type="date" id="fecha_fin" name="fecha_fin" />fecha_final</label> <br>

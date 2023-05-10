@@ -16,7 +16,7 @@ import modelo.modeloRuta;
 /**
  * Servlet implementation class InsertarRutas
  */
-@WebServlet("/InsertarRutas")
+@WebServlet("/InsertarRuta")
 public class InsertarRuta extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -42,18 +42,15 @@ public class InsertarRuta extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		//datuak jaso
-				int id_ruta = Integer.parseInt(request.getParameter("id_ruta"));
 				SimpleDateFormat fecha_ini = new SimpleDateFormat("yyyy-MM-dd");
 				SimpleDateFormat fecha_fin = new SimpleDateFormat("yyyy-MM-dd");
 				String origen = request.getParameter("origen");
 				String destino = request.getParameter("destino");
-				double precio = Double.parseDouble(request.getParameter("precio"));
 				
 				//insertatu
 				modeloRuta mR = new modeloRuta();
 				
 				Ruta ruta = new Ruta();
-				ruta.setId_ruta(id_ruta);
 				try {
 					ruta.setFecha_ini(fecha_ini.parse(request.getParameter("fecha_ini")));
 					ruta.setFecha_fin(fecha_fin.parse(request.getParameter("fecha_fin")));
@@ -63,14 +60,13 @@ public class InsertarRuta extends HttpServlet {
 				}
 				ruta.setOrigen(origen);
 				ruta.setDestino(destino);
-				ruta.setPrecio(precio);
 				
 				mR.Conectar();
 				mR.ainadirRuta(ruta);
 				mR.cerrar();
 				
 				//insertatu ondoren 
-				response.sendRedirect("VerUsuarios");
+				response.sendRedirect("VerRutas");
 	}
 
 }

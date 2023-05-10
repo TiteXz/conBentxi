@@ -7,13 +7,13 @@ public class Parada {
 	private int id_parada;
 	private String ciudad;
 	private String pais;
-	private Date tiempo_estacionamiento;
+	private int tiempo_estacionamiento;
 	private Date fecha_salida;
 	private Date fecha_llegada;
 	
 	public Parada() {}
 
-	public Parada(int id_parada, String ciudad, String pais, Date tiempo_estacionamiento, Date fecha_salida, Date fecha_llegada) {
+	public Parada(int id_parada, String ciudad, String pais, int tiempo_estacionamiento, Date fecha_salida, Date fecha_llegada) {
 		super();
 		this.id_parada = id_parada;
 		this.ciudad = ciudad;
@@ -48,11 +48,11 @@ public class Parada {
 		this.pais = pais;
 	}
 
-	public Date getTiempo_estacionamiento() {
+	public int getTiempo_estacionamiento() {
 		return tiempo_estacionamiento;
 	}
 
-	public void setTiempo_estacionamiento(Date tiempo_estacionamiento) {
+	public void setTiempo_estacionamiento(int tiempo_estacionamiento) {
 		this.tiempo_estacionamiento = tiempo_estacionamiento;
 	}
 

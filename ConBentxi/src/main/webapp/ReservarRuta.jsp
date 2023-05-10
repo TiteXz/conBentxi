@@ -212,6 +212,21 @@ transform: scaleY(120%);
 
     #datos{
       display: flex;
+      width: 60%;
+      margin:10% 0 0 20%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+
+    #datosReserva{
+      width: 30%;
+    }
+
+    #datosCliente{
+      width: 30%;
+    }
+    .menu{
+      margin: -10% 0 0 0;
     }
       #datosReserva{
     display: inline-block;
@@ -220,8 +235,8 @@ transform: scaleY(120%);
     
     .card{
       display:inline-flex;
-      margin: 0 5% 0 -5%;
-      width: 30%;
+      margin: 0 5% 0 0;
+      width: 40%;
     }
 
 }
@@ -229,16 +244,30 @@ transform: scaleY(120%);
 @media only screen and ((min-width: 1201px) and (max-width:1500px)) {
   #datos{
     display: flex;
+    margin-top: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .menu{
+    margin-top: -15%;
   }
     #datosReserva{
   display: inline-block;
+  width: 30%;
   margin: 0 0 0 0;
   }
+  
+  #datosCliente{
+    display: inline-block;
+    width: 30%;
+    margin: 0 0 0 5%;
+    }
   
   .card{
     display:inline-flex;
     margin: 0 5% 0 -5%;
-    width: 30%;
+    width: 40%;
   }
 
 }
@@ -247,35 +276,62 @@ transform: scaleY(120%);
  
   #datos{
     display: flex;
+    margin-top: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .menu{
+    margin-top: -15%;
   }
     #datosReserva{
   display: inline-block;
+  width: 30%;
   margin: 0 0 0 0;
   }
+  
+  #datosCliente{
+    display: inline-block;
+    width: 30%;
+    margin: 0 0 0 5%;
+    }
   
   .card{
     display:inline-flex;
     margin: 0 5% 0 -5%;
-    width: 30%;
+    width: 40%;
   }
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-#datos{
-  display: flex;
-}
-  #datosReserva{
-display: inline-block;
-margin: 0 0 0 0;
-}
+  #datos{
+    display: flex;
+    margin-top: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
 
-.card{
-  display:inline-flex;
-  margin: 0 5% 0 -5%;
+  .menu{
+    margin-top: -15%;
+  }
+    #datosReserva{
+  display: inline-block;
   width: 30%;
-}
+  margin: 0 0 0 0;
+  }
+  
+  #datosCliente{
+    display: inline-block;
+    width: 30%;
+    margin: 0 0 0 5%;
+    }
+  
+  .card{
+    display:inline-flex;
+    margin: 0 5% 0 -5%;
+    width: 40%;
+  }
   
 }
 
@@ -300,16 +356,15 @@ margin: 0 0 0 0;
   
 
 }
-
 </style>
 
 <body>
 
 <div class="menu">
-        <a id="a1" href="Home.html">HOME</a>
-        <a id="a2" href="Cruceros.html">CRUCEROS</a>
-        <a id="a3" href="Rutas.HTML">RUTAS</a>
-        <a id="login" href="LogIn.html">LOG IN</a>
+        <a id="a1" href="Home">HOME</a>
+        <a id="a2" href="Cruceros.jsp">CRUCEROS</a>
+        <a id="a3" href="BuscadorDestino?destino=todas">RUTAS</a>
+        <a id="login" href="FormLogin.jsp">LOG IN</a>
     </div>
 
     <section id="datos">
@@ -400,6 +455,7 @@ margin: 0 0 0 0;
     </section>
 
     <br><br><br>
+    
     <footer class="footer">
         <div class="waves">
           <div class="wave" id="wave1"></div>

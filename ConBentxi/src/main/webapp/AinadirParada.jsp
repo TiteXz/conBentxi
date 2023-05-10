@@ -167,8 +167,7 @@ nav ul {
 	<P id="tituloParada">paradas</P>
 
 	<ul id="menu">
-		<li><a href="Crear.html" title="CREAR">CREAR</a></li>
-		<li><a href="Visualizar.html" title="VISUALIZAR">VISUALIZAR </a></li>
+		<li><a href="VerParadas" title="VISTAS">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -179,18 +178,16 @@ nav ul {
 		<ul>
 			<li><a>
 					<div id="formulario">
-						<form method="POST" action="AñadirParada">
-							<label><input type="number" id="id_parada"
-								name="id_parada" placeholder="id_parada" /></label> <br> <br>
-							<label><input type="text" id="ciudad" name="ciudad"
-								placeholder="ciudad" /></label> <br> <br> <label><input
+						<form method="POST" action="InsertarParada">
+							<label><input required="required" type="text" id="ciudad" name="ciudad"
+								placeholder="ciudad" /></label> <br> <br> <label><input required="required"
 								type="text" id="pais" name="pais" placeholder="país" /></label> <br>
-							<br> <label><input type="number"
-								id="tiempoEstacionado" name="tiempoEstacionado"
-								placeholder="Dias estacionado" /></label> <br> <br> <label><input
-								type="date" id="fechaSalida" name="fechaSalida" />fecha salida</label>
-							<br> <br> <label><input type="date"
-								id="fechaLlegada" name="fechaLlegada" />fecha fin</label> <br> <br>
+							<br> <label><input required="required" type="text"
+								id="tiempo_estacionamiento" name="tiempo_estacionamiento"
+								placeholder="Tiempo estacionado" /></label> <br> <br> <label><input required="required"
+								type="date" id="fecha_salida" name="fecha_salida" />fecha salida</label>
+							<br> <br> <label><input required="required" type="date"
+								id="fecha_llegada" name="fecha_llegada" />fecha llegada</label> <br> <br>
 							<input id="LogIn" type="submit" value="CREAR" />
 						</form>
 					</div>

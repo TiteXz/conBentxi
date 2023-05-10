@@ -38,8 +38,10 @@ public class VerRutas extends HttpServlet {
 		ArrayList<Ruta> rutas = mR.getRutas();
 		mR.cerrar();
 		
+		
+		
 		request.setAttribute("rutas", rutas);
-		request.getRequestDispatcher("VisualizarRuta.jsp").forward(request, response);
+		request.getRequestDispatcher("VistaRutas.jsp").forward(request, response);
 	}
 
 	/**

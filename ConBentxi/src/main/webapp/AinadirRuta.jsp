@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Añadir Ruta</title>
 </head>
 
 <style>
@@ -165,9 +165,10 @@ nav ul {
 
 	<P id="tituloRuta">rutas</P>
 
+	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
+
 	<ul id="menu">
-		<li><a href="Crear.html" title="CREAR">CREAR</a></li>
-		<li><a href="Visualizar.html" title="VISUALIZAR">VISUALIZAR </a></li>
+		<li><a href="VerRutas" title="VISTAS">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -178,17 +179,15 @@ nav ul {
 		<ul>
 			<li><a>
 					<div id="formulario">
-						<form method="POST" action="AñadirUsuario">
-							<label><input type="number" id="id_ruta" name="id_ruta"
-								placeholder="id_ruta" /></label> <br> <br> <label><input
+						<form method="POST" action="InsertarRuta">
+							<label><input required="required"
 								type="date" id="fecha_ini" name="fecha_ini" />fecha inicio</label> <br>
-							<br> <label><input type="date" id="fecha_fin"
-								name="fecha_fin" />fecha fin</label> <br> <br> <label><input
+							<br> <label><input required="required" type="date" id="fecha_fin"
+								name="fecha_fin" />fecha fin</label> <br> <br> <label><input required="required"
 								type="text" id="origen" name="origen" placeholder="origen" /></label> <br>
-							<br> <label><input type="text" id="destino"
-								name="destino" placeholder="destino" /></label> <br> <br> <label><input
-								type="text" id="precio" name="precio" placeholder="precio" /></label> <br>
-							<br> <input id="LogIn" type="submit" value="CREAR" />
+							<br> <label><input required="required" type="text" id="destino"
+								name="destino" placeholder="destino" /></label> <br> <br> 
+							<input id="LogIn" type="submit" value="CREAR" />
 						</form>
 					</div>
 			</a></li>

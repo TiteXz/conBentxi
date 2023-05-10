@@ -166,9 +166,10 @@ nav ul {
 
 	<P id="tituloEmpleado">empleados</P>
 
+	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
+
 	<ul id="menu">
-		<li><a href="Crear.html" title="CREAR">CREAR</a></li>
-		<li><a href="Visualizar.html" title="VISUALIZAR">VISUALIZAR </a></li>
+		<li><a href="VerEmpleados" title="VISTAS">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -179,16 +180,18 @@ nav ul {
 		<ul>
 			<li><a>
 					<div id="formulario">
-						<form method="POST" action="AñadirEmpleado">
-							<label><input type="number" id="id_empleado"
-								name="id_empleado" placeholder="id_empleado" /></label> <br> <br>
-							<label><input type="text" id="nombre" name="nombre"
+						<form method="POST" action="InsertarEmpleado">
+							<label><input required="required" type="text" id="nombre" name="nombre"
 								placeholder="nombre" /></label> <br> <br> <label><input
-								type="text" id="apellido" name="apellido" placeholder="apellido" /></label>
-							<br> <br> <label><input type="text"
+								required="required" type="text" id="apellido" name="apellido" placeholder="apellido" /></label>
+							<br> <br> <label><input required="required" type="text"
 								id="trabajo" name="trabajo" placeholder="trabajo" /></label> <br>
-							<br> <label><input type="number" id="id_crucero"
+							<br> <label><input required="required" type="number" id="id_crucero"
 								name="id_crucero" placeholder="id_crucero" /></label> <br> <br>
+							<label><input required="required" type="text" id="usuario"
+								name="usuario" placeholder="usuario" /></label> <br> <br>
+							<label><input required="required" type="password" id="password"
+								name="password" placeholder="password" /></label> <br> <br>
 							<input id="LogIn" type="submit" value="CREAR" />
 						</form>
 					</div>

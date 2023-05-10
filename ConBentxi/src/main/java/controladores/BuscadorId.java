@@ -9,7 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import clases.Habitacion;
 import clases.Ruta;
+import modelo.modeloCrucero;
+import modelo.modeloHabitacion;
 import modelo.modeloRuta;
 
 /**
@@ -36,13 +39,24 @@ public class BuscadorId extends HttpServlet {
 		int id_ruta = Integer.parseInt(request.getParameter("id_ruta"));
 		
 		modeloRuta mR = new modeloRuta();
+		modeloHabitacion mH = new modeloHabitacion();
+		modeloCrucero mC = new modeloCrucero();
 		
+		mC.Conectar();
+		int id_crucero = mC.getId_Crucero(id_ruta);
+		mC.cerrar();
+		
+		mH.Conectar();
+		Habitacion habitacionPrecio = mH.getHabitacionMasBarata(id_crucero);
+		mH.cerrar();
 		
 		mR.Conectar();
 		ArrayList<Ruta> rutas = mR.buscarRutasId(id_ruta);
 		mR.cerrar();
 		
+		
 		request.setAttribute("rutas", rutas);
+		request.setAttribute("habitacionPrecio", habitacionPrecio);
 		if(rutas==null) {
 			request.getRequestDispatcher("RutasNada.jsp").forward(request, response);
 		}else

@@ -9,7 +9,10 @@
 </head>
 <style> 
 
-
+section{
+	margin-bottom: -5%;
+	margin-top:-100px;
+}
 
 .footer {
     position: relative;
@@ -183,7 +186,7 @@
                                                 type="submit" value="Enviar">Log in</button>
                                         </div>
                                         <div class="text-center">
-                                            <a href="Home.jsp">Continuar como Cliente</a>
+                                            <a href="Home">Continuar como Cliente</a>
                                         </div>
 
                                     </form>

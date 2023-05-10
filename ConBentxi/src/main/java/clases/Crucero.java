@@ -18,7 +18,7 @@ public class Crucero {
 		this.capitan = capitan;
 		this.categoria = categoria;
 		this.id_ruta = id_ruta;
-		this.imagen = imagen;
+		this.setImagen(imagen);
 	}
 
 	public int getId_crucero() {
@@ -60,7 +60,7 @@ public class Crucero {
 	public void setId_ruta(int id_ruta) {
 		this.id_ruta = id_ruta;
 	}
-	
+
 	public String getImagen() {
 		return imagen;
 	}
@@ -72,7 +72,7 @@ public class Crucero {
 	@Override
 	public String toString() {
 		return "crucero [id_crucero=" + id_crucero + ", nombre=" + nombre + ", capitan=" + capitan + ", categoria="
-				+ categoria + ", id_ruta=" + id_ruta + " imagen= " +  imagen +"]";
+				+ categoria + "]";
 	}
 	
 	

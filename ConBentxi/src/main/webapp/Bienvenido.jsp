@@ -11,250 +11,153 @@
 	crossorigin="anonymous">
 </head>
 <style>
-#datosCliente {
-	width: 400px;
-	padding: 5% 0% 0% 5%;
-	display: inline-flex;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(imgs/beach-sea-water-ocean-person-texture-63881-pxhere.com.jpg);
 }
 
-#datosReserva {
-	width: 200px;
-	padding: 5% 0% 0% 0%;
-	padding-top: -100px;
-	display: inline-flex;
+#logout {
+    float: left; 
+    margin: -9% 0 0 10px;
+    position: absolute;
+    padding: 10px;
+    background-color: #216eff;
+    border-radius: 10px;
 }
 
-section {
-	background-color: #eee;
-	width: 50%;
-	padding-bottom: 5%;
-	margin-left: 22%;
-	border-radius: 10px;
-	margin-top: 200px;
-	margin-bottom: 100px;
+#logout a{
+    color: #fff;
+    text-decoration: none;
 }
 
-.card {
-	height: 300px;
-	width: 200px;
-	margin: 3% 0 0 0;
-	position: absolute;
-	display: inline-flex;
+#logout a:hover{
+    color: black;
+    text-decoration: none;
 }
 
-.menu a {
-	opacity: 0.8;
-	text-decoration: none;
-	color: black;
+#logout:hover{
+    background-color: #216fffc5;
 }
 
-.menu a:hover {
-	opacity: 1;
-	color: rgb(0, 81, 255);
-	transition: ease .15s;
+
+
+#botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10%;
 }
 
-.menu {
-	width: 100%;
-	height: 75px;
-	background-color: rgba(255, 255, 255, 0.911);
-	position: fixed;
-	margin-top: -200px;
-	box-shadow: 4px 0px 4px 0;
-	padding-top: 25px;
-	z-index: 100;
+button {
+    display: block;
+    margin: 10px;
+    padding: 15px;
+    min-width: 150px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #216eff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-#a1 {
-	margin-left: 1450px;
+button a{
+    color: #fff;
+    text-decoration: none;
 }
 
-#a2 {
-	margin-left: 50px;
+button a:hover{
+    color: black;
+    text-decoration: none;
 }
 
-#a3 {
-	margin-left: 50px;
+button:hover {
+    background-color: #216fffc5;
 }
 
-#login {
-	margin-left: 50px;
-	border: 2px solid black;
-	padding: 5px;
-	border-radius: 10px;
+
+@media only screen and (max-width: 768px) {
+    button {
+        min-width: 100px;
+    }
+
+    #botones {
+        grid-template-columns: repeat(1, 1fr); /* One column */
+    }
 }
 
-#logo img {
-	height: 80px;
-	width: 110px;
-	position: absolute;
-	margin-top: -30px;
+@media only screen and (max-width: 480px) {
+    button {
+        min-width: 80px;
+        font-size: 14px;
+    }
 }
 
-.footer {
-	position: relative;
-	width: 100%;
-	background: #3586ff;
-	min-height: 100px;
-	padding: 20px 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-top: 125px;
-}
 
-.social-icon, #menu {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 10px 0;
-	flex-wrap: wrap;
-}
-
-.social-icon__item, .menu__item {
-	list-style: none;
-}
-
-.social-icon__link {
-	font-size: 2rem;
-	color: #fff;
-	margin: 0 10px;
-	display: inline-block;
-	transition: 0.5s;
-}
-
-.social-icon__link:hover {
-	transform: translateY(-10px);
-}
-
-.menu__link {
-	font-size: 1.2rem;
-	color: #fff;
-	margin: 0 10px;
-	display: inline-block;
-	transition: 0.5s;
-	text-decoration: none;
-	opacity: 0.75;
-	font-weight: 300;
-}
-
-.menu__link:hover {
-	opacity: 1;
-}
-
-.footer p {
-	color: #fff;
-	margin: 15px 0 10px 0;
-	font-size: 1rem;
-	font-weight: 300;
-}
-
-.wave {
-	position: absolute;
-	top: -100px;
-	left: 0;
-	width: 100%;
-	height: 100px;
-	background: url("https://i.ibb.co/wQZVxxk/wave.png");
-	background-size: 1000px 100px;
-}
-
-.wave#wave1 {
-	z-index: 1000;
-	opacity: 1;
-	bottom: 0;
-	animation: animateWaves 4s linear infinite;
-}
-
-.wave#wave2 {
-	z-index: 999;
-	opacity: 0.5;
-	bottom: 10px;
-	animation: animate 4s linear infinite !important;
-}
-
-.wave#wave3 {
-	z-index: 1000;
-	opacity: 0.2;
-	bottom: 15px;
-	animation: animateWaves 3s linear infinite;
-}
-
-.wave#wave4 {
-	z-index: 999;
-	opacity: 0.7;
-	bottom: 20px;
-	animation: animate 3s linear infinite;
-}
-
-@
-keyframes animateWaves { 0% {
-	background-position-x: 1000px;
-}
-
-100
-%
-{
-background-positon-x
-:
-0px;
-}
-}
-@
-keyframes animate { 0% {
-	background-position-x: -1000px;
-}
-100
-%
-{
-background-positon-x
-:
-0px;
-}
-}
 </style>
 
 <body>
-	<div class="progress">
-		<div class="progress-bar progress-bar-striped progress-bar-animated"
-			role="progressbar" aria-valuenow="84" aria-valuemin="0"
-			aria-valuemax="100" style="width: 84%"></div>
-	</div>
+	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
 
-	<br>
-	<br>
-	<br>
+<div id="botones">
+<button>
+  <a href="VerActividades">ACTIVIDADES</a> 
+</button>
 
-	<a id="trabajar">Vamos manos a la obra!!</a>
+<button>
+  <a href="VerClientes">CLIENTES</a> 
+</button>
 
-	<a class="open-hide1">Crear</a>
+<button>
+  <a href="VerCruceros">CRUCEROS</a>
+</button>
 
-	<ul class="menuRayas1">
-		<li><a href="AinadirActi.jsp">actividad</a></li>
-		<li><a href="InsertarCrucero">cruceros</a></li>
-		<li><a href="AinadirEmple.jsp">empleados</a></li>
-		<li><a href="AinadirHabita.jsp">habitaciones</a></li>
-		<li><a href="AinadirParada.jsp">paradas</a></li>
-		<li><a href="AinadirPuerto.jsp">puertos</a></li>
-		<li><a href="AinadirRuta.jsp">rutas</a></li>
+<button>
+  <a href="VerEmpleados">EMPLEADOS</a> 
+</button>
 
-	</ul>
+<button>
+ <a href="VerRutas">RUTAS</a> 
+</button>
 
-	<a class="open-hide2">Visualizar</a>
+<button>
+  <a href="VerReservas">RESERVAS</a> 
+</button>
 
-	<ul class="menuRayas">
-		<li><a href="VisualizarActi.jsp">actividad</a></li>
-		<li><a href="VerCruceros">cruceros</a></li>
-		<li><a href="VisualizarEmple.jsp">empleados</a></li>
-		<li><a href="VisualizarHabita.jsp">habitaciones</a></li>
-		<li><a href="VisualizarParada.jsp">paradas</a></li>
-		<li><a href="VisualizarPuerto.jsp">puertos</a></li>
-		<li><a href="VerRutas">rutas</a></li>
+<button>
+  <a href="VerHabitaciones">HABITACIONES</a> 
+</button>
 
-	</ul>
+<button>
+  <a href="VerParadas"> PARADAS</a>
+</button>
 
+<button>
+  <a href="VerEstacionamientos">ESTACIONAMIENTOS</a> 
+</button>
+
+<button>
+ <a href="VerRutasParadas"> RUTAS_PARADAS</a>
+</button>
+
+<button>
+  <a href="VerCrucerosActividades">CRUCEROS_ACTIVIDADES</a> 
+</button>
+
+<button>
+  <a href="VerInscripciones">INSCRIPCIONES</a> 
+</button>
+
+</div>
 
 </body>
 </html>

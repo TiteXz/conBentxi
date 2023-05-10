@@ -166,9 +166,10 @@ nav ul {
 
 	<P id="tituloCrucero">cruceros</P>
 
+	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
+	
 	<ul id="menu">
-		<li><a href="Crear.html" title="CREAR">CREAR</a></li>
-		<li><a href="Visualizar.html" title="VISUALIZAR">VISUALIZAR </a></li>
+		<li><a href="VerCruceros" title="VISTAS">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -180,12 +181,12 @@ nav ul {
 			<li><a>
 					<div id="formulario">
 						<form method="POST" action="InsertarCrucero">
-							<label><input type="text" id="nombre" name="nombre"
+							<label><input required="required" type="text" id="nombre" name="nombre"
 								placeholder="nombre" /></label> <br> <br> <label><input
-								type="text" id="capitan" name="capitan" placeholder="capitan" /></label>
-							<br> <br> <label><input type="text"
+								required="required" type="text" id="capitan" name="capitan" placeholder="capitan" /></label>
+							<br> <br> <label><input required="required" type="text"
 								id="categoria" name="categoria" placeholder="categoria" /></label> <br>
-							<br> <label><input type="number" id="id_ruta"
+							<br> <label><input required="required" type="number" id="id_ruta"
 								name="id_ruta" placeholder="id_ruta" /></label> <br> <br> <input
 								id="LogIn" type="submit" value="CREAR" />
 						</form>

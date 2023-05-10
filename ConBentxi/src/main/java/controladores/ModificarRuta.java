@@ -36,11 +36,10 @@ public class ModificarRuta extends HttpServlet {
 		modeloRuta mR = new modeloRuta();
 		
 		int id_ruta = Integer.parseInt(request.getParameter("id_ruta"));
-		SimpleDateFormat fecha_ini = new SimpleDateFormat("yyyy/MM/dd");
-		SimpleDateFormat fecha_fin = new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat fecha_ini = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat fecha_fin = new SimpleDateFormat("yyyy-MM-dd");
 		String origen = request.getParameter("origen");
 		String destino = request.getParameter("destino");
-		double precio = Double.parseDouble(request.getParameter("precio"));
 		
 		Ruta ruta = new Ruta();
 		ruta.setId_ruta(id_ruta);
@@ -53,7 +52,6 @@ public class ModificarRuta extends HttpServlet {
 		}
 		ruta.setOrigen(origen);
 		ruta.setDestino(destino);
-		ruta.setPrecio(precio);
 		
 		mR.Conectar();
 		mR.modificarRuta(ruta);

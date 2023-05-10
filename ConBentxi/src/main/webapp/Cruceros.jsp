@@ -76,7 +76,7 @@ body {
 }
 
 .card-text{
-    margin: 60% 0 0 10%;
+    margin: 40% 0 0 10%;
     color: black;
     font-family: 'Courier new';
 }
@@ -295,8 +295,8 @@ h2{
 <body>
 
     <div class="menu">
-        <a id="a1" href="Home.jsp">HOME</a>
-        <a id="a2" href="Cruceros.jsp">CRUCEROS</a>
+        <a id="a1" href="Home">HOME</a>
+        <a id="a2" href="VerCrucerosClientes">CRUCEROS</a>
         <a id="a3" href="BuscadorDestino?destino=todas">RUTAS</a>
         <a id="login" href="FormLogin.jsp">LOG IN</a>
     </div>

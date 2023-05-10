@@ -9,20 +9,18 @@ public class Ruta {
 	private Date fecha_fin;
 	private String origen;
 	private String destino;
-	private double precio;
 	
 	public Ruta() {
 		super();
 	}
 
-	public Ruta(int id_ruta, Date fecha_ini, Date fecha_fin, String origen, String destino, double precio) {
+	public Ruta(int id_ruta, Date fecha_ini, Date fecha_fin, String origen, String destino) {
 		super();
 		this.id_ruta = id_ruta;
 		this.fecha_ini = fecha_ini;
 		this.fecha_fin = fecha_fin;
 		this.origen = origen;
 		this.destino = destino;
-		this.precio = precio;
 	}
 
 	public int getId_ruta() {
@@ -65,17 +63,9 @@ public class Ruta {
 		this.destino = destino;
 	}
 
-	public double getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
-
 	@Override
 	public String toString() {
 		return "Ruta [id_ruta=" + id_ruta + ", fecha_ini=" + fecha_ini + ", fecha_fin=" + fecha_fin + ", origen="
-				+ origen + ", destino=" + destino + ", precio=" + precio + "]";
+				+ origen + ", destino=" + destino + "]";
 	}
 }

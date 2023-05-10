@@ -220,9 +220,10 @@ nav ul {
 
 	<P id="tituloPuerto">puertos</P>
 
+	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
+
 	<ul id="menu">
-		<li><a href="Crear.html" title="CREAR">CREAR</a></li>
-		<li><a href="Visualizar.html" title="VISUALIZAR">VISUALIZAR </a></li>
+		<li><a href="VerPuertos" title="VSITAS">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -233,13 +234,11 @@ nav ul {
 		<ul>
 			<li><a>
 					<div id="formulario">
-						<form method="POST" action="AñadirUsuario">
-							<label><input type="number" id="id_puerto"
-								name="id_puerto" placeholder="id_puerto" /></label> <br> <br>
-							<label><input type="text" id="pais" name="pais"
+						<form method="POST" action="InsertarPuerto">
+							<label><input required="required" type="text" id="pais" name="pais"
 								placeholder="país" /></label> <br> <br> <label><input
-								type="text" id="ciudad" name="ciudad" placeholder="ciudad" /></label> <br>
-							<br> <label><input type="number" id="amarre"
+								required="required" type="text" id="ciudad" name="ciudad" placeholder="ciudad" /></label> <br>
+							<br> <label><input required="required" type="number" id="amarre"
 								name="amarre" placeholder="numero de amarre" /></label> <br> <br>
 							<input id="LogIn" type="submit" value="CREAR" />
 						</form>

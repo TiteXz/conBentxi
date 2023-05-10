@@ -1,33 +1,35 @@
 package clases;
 
 public class Habitacion {
-	private int numero_habita;
+	private int numero_habitacion;
 	private String	descripcion; 
 	private double precio;
-	private int id_crucero;
+	private int id_crucero; 
 	private int id_empleado;
 	private String imagen;
+	private String dni_cliente;
 	
 	
 	public Habitacion() {}
 
-	public Habitacion(int numero_habita, String descripcion, double precio, int id_crucero,
-			int id_empleado, String imagen) {
+	public Habitacion(int numero_habita, String descripcion, double precio, int id_crucero, int id_empleado, String imagen, String dni_cliente) {
 		super();
-		this.numero_habita = numero_habita;
+		this.numero_habitacion = numero_habita;
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.id_crucero = id_crucero;
 		this.id_empleado = id_empleado;
 		this.imagen = imagen;
+		this.dni_cliente = dni_cliente;
+		
 	}
 
-	public int getNumero_habita() {
-		return numero_habita;
+	public int getNumero_habitacion() {
+		return numero_habitacion;
 	}
 
-	public void setNumero_habita(int numero_habita) {
-		this.numero_habita = numero_habita;
+	public void setNumero_habitacion(int numero_habitacion) {
+		this.numero_habitacion = numero_habitacion;
 	}
 
 	public String getDescripcion() {
@@ -68,5 +70,13 @@ public class Habitacion {
 	
 	public void setImagen(String imagen) {
 		this.imagen = imagen;
+	}
+
+	public String getDni_cliente() {
+		return dni_cliente;
+	}
+
+	public void setDni_cliente(String dni_cliente) {
+		this.dni_cliente = dni_cliente;
 	}
 }

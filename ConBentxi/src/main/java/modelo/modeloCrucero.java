@@ -78,7 +78,8 @@ public class modeloCrucero extends Conexion{
 		
 		
 	}
-
+	
+	
 	public void ainadirCrucero(Crucero crucero) {
 		try {
 			PreparedStatement pst = conexion.prepareStatement("INSERT INTO cruceros (nombre, capitan, categoria, id_ruta) VALUES(?,?,?,?)");

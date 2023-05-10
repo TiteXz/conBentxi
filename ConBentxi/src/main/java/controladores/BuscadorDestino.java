@@ -49,7 +49,7 @@ public class BuscadorDestino extends HttpServlet {
 			mR.cerrar();
 			request.setAttribute("rutas", Todasrutas);
 			request.getRequestDispatcher("Rutas.jsp").forward(request, response);
-		}else if(destino==null) {
+		}else if(destino.equals("")) {
 			mR.Conectar();
 			ArrayList<Ruta> rutas = mR.buscarRutasNombre(destino);
 			mR.cerrar();

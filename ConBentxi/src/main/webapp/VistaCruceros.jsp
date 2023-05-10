@@ -161,10 +161,11 @@ a:hover {
 
 	<div id="wrapper">
 
+		<div id="logout"> <a href="AbrirLogin">Log out</a></div>
 
 		<ul id="menu">
-			<li><a href="Bienvenido.jsp" title="CREAR">CREAR</a></li>
-			<li><a href="Bienvenido.jsp" title="VISUALIZAR">VISUALIZAR</a></li>
+			<li><a href="AinadirCrucero.jsp" title="CREAR">CREAR</a></li>
+			<li><a href="Bienvenido.jsp" title="VISTAS">VISTAS</a></li>
 		</ul>
 
 		<h1>Cruceros</h1>

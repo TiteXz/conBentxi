@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,6 +45,16 @@ section img:hover {
     filter: contrast(140%);
 }
 
+.menu a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+    border: 2px solid rgba(0, 0, 0, 0);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
 .menu a:hover {
     background-color: #0062ff;
     box-shadow: 0 0 0 5px #1f75ff5f;
@@ -61,28 +72,20 @@ section img:hover {
     z-index: 100;
 }
 
-.menu a {
-    text-decoration: none;
-    color: black;
-    opacity: 0.8;
-    border: 2px solid rgba(0, 0, 0, 0);
-    padding: 5px;
-    border-radius: 10px;
-    transition: .3s;
+#a1,
+#a2,
+#a3 {
+    margin: 10px 0 0 25px;
 }
 
-#a1, #a2, #a3 {
-    margin: 10px 0 0 25px;
-  }
-  
-  #login {
+#login {
     border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
     margin: -7px 10px 0 0;
     float: right;
-  }
-  
+}
+
 .footer {
     position: relative;
     width: 100%;
@@ -211,7 +214,7 @@ section img:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 600px;
+    padding-top: 8%;
 }
 
 #texto {
@@ -233,7 +236,6 @@ section img:hover {
 }
 
 #parte1 {
-    background-color: #2289ff;
     width: 100%;
     height: 600px;
     margin: 200px 0 0 0;
@@ -242,8 +244,6 @@ section img:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 600px;
-    color: white;
 }
 
 #cuerpo {
@@ -252,6 +252,7 @@ section img:hover {
     display: flex;
     text-align: justify;
     margin: -10% 0 0 30%;
+    color: white;
 }
 
 #imgArriba {
@@ -262,7 +263,47 @@ section img:hover {
     border-radius: 500px;
 }
 
+#actividades {
+    display: flex;
+    background-image: url(imgs/beach-sea-water-ocean-person-texture-63881-pxhere.com.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    padding-bottom: 5%;
+    width: 100%;
+    margin-bottom: -5%;
+}
 
+#actividades img {
+    height: 250px;
+    width: 350px;
+    margin: 10% -10% 0 5%;
+    display: inline-flex;
+    border-radius: 500px;
+}
+
+#lista {
+    display: inline-flex;
+    margin: 11% 0 0 5%;
+    width: 20%;
+    border-radius: 10px;
+}
+
+#lista li {
+    display: block;
+}
+
+#lista li a {
+    display: inline-block;
+}
+
+
+div#lineaH {
+    background-color: white;
+    height: 1px;
+    width: 80%;
+}
 
 @media only screen and (min-width: 1501px) {
 
@@ -309,6 +350,37 @@ section img:hover {
 
     #parte2 {
         height: 800px;
+    }
+
+    #actividades {
+        display: flex;
+        height: auto;
+        padding-bottom: 10%;
+        width: 100%;
+        margin-bottom: -5%;
+    }
+
+    #texto2 {
+        width: 45%;
+        display: inline-flex;
+        text-align: justify;
+        margin: 7.5% 0 0 15%;
+        color: white;
+    }
+
+    #actividades img {
+        height: 250px;
+        width: 350px;
+        margin: 10% -10% 0 5%;
+        display: inline-flex;
+        border-radius: 500px;
+    }
+
+    #lista {
+        display: inline-flex;
+        margin: 11% 5% 0 5%;
+        width: 20%;
+        border-radius: 10px;
     }
 
     section {
@@ -369,6 +441,36 @@ section img:hover {
         height: 800px;
     }
 
+    #actividades {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding-bottom: 25%;
+        margin-bottom: -25%;
+    }
+
+    #texto2 {
+        width: 45%;
+        display: inline-flex;
+        text-align: justify;
+        margin: 5% 5% 0 0;
+        float: right;
+        color: white;
+    }
+
+    #actividades img {
+        width: 30%;
+        display: inline-flex;
+        margin: 5% 10% 0 5%;
+
+    }
+
+    #lista {
+        width: 30%;
+        margin-left: 5%;
+        margin-top: 8%;
+    }
+
     section {
         margin: 100px 0 25px 10%;
         width: 80%;
@@ -425,6 +527,37 @@ section img:hover {
         height: 1200px;
     }
 
+
+    #actividades {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding-bottom: 25%;
+        margin-bottom: -25%;
+    }
+
+    #texto2 {
+        width: 80%;
+        display: inline-block;
+        text-align: justify;
+        margin: 10% 0 0 5%;
+        color: white;
+        margin-left: 10%;
+    }
+
+    #actividades img {
+        width: 60%;
+        display: inline-block;
+        margin: 10% 0% 20% 20%;
+        margin-bottom: 0;
+
+    }
+
+    #lista {
+        width: 80%;
+        margin-left: 10%;
+    }
+
     section {
         margin: 100px 0 25px 10%;
         width: 80%;
@@ -475,6 +608,36 @@ section img:hover {
         margin: 10% 20% 0 0;
     }
 
+    #actividades {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding-bottom: 25%;
+        margin-bottom: -25%;
+    }
+
+    #texto2 {
+        width: 80%;
+        display: inline-block;
+        text-align: justify;
+        margin: 10% 0 0 5%;
+        color: white;
+        margin-left: 10%;
+    }
+
+    #actividades img {
+        width: 60%;
+        display: inline-block;
+        margin: 10% 0% 20% 20%;
+        margin-bottom: 0;
+
+    }
+
+    #lista {
+        width: 80%;
+        margin-left: 10%;
+    }
+
     section {
         margin: 100px 0 25px 10%;
         width: 80%;
@@ -495,10 +658,20 @@ section img:hover {
 
     #parte1 {
         width: 100%;
+        height: 800px;
     }
 
     #parte2 {
         width: 100%;
+        height: 1700px;
+    }
+
+    #actividades {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding-bottom: 25%;
+        margin-bottom: -25%;
     }
 
     #cuerpo {
@@ -515,6 +688,27 @@ section img:hover {
         margin: 10% 0 0 5%;
     }
 
+    #texto2 {
+        width: 80%;
+        display: inline-block;
+        text-align: justify;
+        margin: 10% 0 0 5%;
+        color: white;
+        margin-left: 10%;
+    }
+
+    #actividades img {
+        width: 80%;
+        display: inline-block;
+        margin: 10% 0% 20% 10%;
+
+    }
+
+    #lista {
+        width: 80%;
+        margin-left: 10%;
+    }
+
     #imgArriba {
         width: 80%;
         display: inline-block;
@@ -525,14 +719,6 @@ section img:hover {
     #imgAbajo {
         width: 80%;
         display: inline-block;
-    }
-
-    #parte1 {
-        height: 800px;
-    }
-
-    #parte2 {
-        height: 1700px;
     }
 
     section {
@@ -552,10 +738,10 @@ section img:hover {
 
 
 	 <div class="menu">
-    <a id="a1" href="Home.jsp">HOME</a>
+    <a id="a1" href="Home">HOME</a>
     <a id="a2" href="VerCrucerosClientes">CRUCEROS</a>
     <a id="a3" href="BuscadorDestino?destino=todas">RUTAS</a>
-    <a id="login" href="LogIn.jsp">LOG IN</a>
+    <a id="login" href="FormLogin.jsp">LOG IN</a>
   </div>
 
   <div id="parte1">
@@ -619,14 +805,27 @@ section img:hover {
     </div>
   </div>
 
-  <br><br><br>
+  <div id="lineaH"></div>
+
+  <div id="actividades">
+    <img src="https://murciafiesta.es/wp-content/uploads/crucero-estudiantes.jpg" alt="">
+    
+    <div id="texto2">En nuestro crucero, nos enorgullece ofrecerte una amplia gama de actividades emocionantes y entretenidas para que tu experiencia sea inolvidable. Sabemos que cada pasajero es único, por lo que nos esforzamos por brindar opciones que se adapten a todos los gustos y preferencias.
+
+      Nuestro equipo de expertos ha diseñado cuidadosamente un programa completo de actividades a bordo, pensando en cada detalle para garantizar tu diversión y satisfacción. Ya sea que busques relajarte y disfrutar de un ambiente tranquilo o emocionarte con aventuras llenas de adrenalina, tenemos algo para ti.
+      
+      Para los amantes de la relajación y el bienestar, ofrecemos espacios de spa y salón de belleza donde podrás disfrutar de tratamientos rejuvenecedores, masajes terapéuticos y actividades de bienestar como yoga o meditación. Nuestros profesionales altamente capacitados te ayudarán a encontrar la paz y el equilibrio que necesitas durante tus vacaciones.
+      
+      Si eres un entusiasta de la actividad física, contamos con modernas instalaciones deportivas donde podrás disfrutar de sesiones de ejercicio en nuestro gimnasio completamente equipado. Además, organizamos clases grupales de diferentes disciplinas como aeróbic, pilates o spinning, para que puedas mantenerte en forma mientras te diviertes rodeado de un entorno maravilloso.En resumen, en nuestro crucero encontrarás un mundo de actividades diseñadas para satisfacer tus deseos y necesidades. Queremos que vivas momentos inolvidables, conozcas personas interesantes y crees recuerdos que perdurarán para siempre. ¡Prepárate para disfrutar de una experiencia llena de diversión, relajación y aventura a bordo de nuestro crucero!</div>
 
 
 
-
-  <br><br><br>
-
-
+  <ul id="lista" class="list-group list-group-flush">
+  <c:forEach items="${actividades}" var="actividad">
+    <li class="list-group-item">Actividad: ${actividad.nombre}, ${actividad.descripcion} desde ${actividad.fecha_ini} hasta ${actividad.fecha_fin}</li>
+  </c:forEach>
+  </ul>
+</div>
 
 
 
