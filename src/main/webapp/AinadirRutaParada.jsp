@@ -8,27 +8,46 @@
 </head>
 
 <style>
-p#tituloCrucero {
+#logout {
+    width:60px;
+    padding: 10px;
+    background-color: #216eff;
+    border-radius: 10px;
+}
+
+#logout a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#logout a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+#logout:hover{
+    background-color: #216fffc5;
+}
+
+#tituloRutasParadas{
 	font-family: 'Courier New';
 	text-transform: uppercase;
-	margin-left: 835px;
 	margin-top: 100px;
+	margin-left:22%;
 	position: absolute;
 	font-size: 40px;
 }
 
 #menu {
-	display: inline-flex;
 	list-style: none;
-	margin-left: 38%;
-	margin-bottom: 100px;
+	float:left;
+	position: ;
 }
 
 #menu li a {
 	position: relative;
 	font-weight: bold;
 	color: rgb(0, 183, 255);
-	margin: 0px 60px;
 	text-decoration: none;
 }
 
@@ -116,60 +135,192 @@ nav ul {
 	color: rgb(32, 32, 226);
 }
 
-.open-hide {
-	background-color: #fff;
-	color: yellow;
-	width: 35px;
-	height: 35px;
-	display: block;
-	background-image:
-		url(https://cdn-icons-png.flaticon.com/512/54/54206.png);
-	/*https://s3-us-west-2.amazonaws.com/s.cdpn.io/6001/menu.png*/
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 25px;
-	text-indent: -9999em;
-	margin-top: -840px;
-	border-radius: 10px;
+
+@media only screen and (min-width: 1501px) {
+#tituloRutasParadas{
+    margin: 0 0 0 45%;
+    position: absolute;
 }
 
-.open-hide:hover {
-	cursor: pointer;
+#formulario{
+    margin: 10% 0 0 -20%;
 }
 
-.menu {
-	height: 0;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-	width: 10em;
-	overflow: hidden;
-	margin-top: 0;
-	padding: 0;
-	box-sizing: border-box;
+#menu li a{
+    margin-left: -40px;
 }
 
-.menu:hover {
-	height: 320px;
-	padding-top: 1em;
 }
 
-.open-hide:hover+.menu {
-	height: 320px;
-	padding-top: 1em;
+@media only screen and ((min-width: 1201px) and (max-width:1500px)) {
+#tituloRutasParadas{
+    margin: 0 0 0 40%;
+    position: absolute;
 }
+
+#formulario{
+    width: 100%;
+    padding: 2% 45% 20% 10%;
+    margin: 0 0 0 -40%;
+}
+
+#formulario2{
+    width: 108%;
+    margin: 0 0 0 -7%;
+    height: 634px;
+}
+
+img{
+    width: 600px;
+    height: 550px;
+    border-radius: 0px;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+}
+
+@media only screen and ((min-width: 992px) and (max-width: 1200px)){
+#tituloRutasParadas{
+    margin: 0 0 0 40%;
+    position: absolute;
+}
+
+
+#formulario{
+    width: 80%;
+    padding: 2% 55% 20% 0%;
+    margin: 0 0 0 -31%;
+}
+
+#formulario2{
+    width: 110%;
+    margin: 0 0 0 -12%;
+    height: 634px;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    border-radius: 0%;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+#tituloRutasParadas{
+    margin: 0 0 0 40%;
+    position: absolute;
+}
+
+#formulario{
+    width: 60%;
+    padding: 2% 65% 20% 0%;
+    margin: 0 0 0 -30%;
+}
+
+#formulario2{
+    width: 110%;
+    margin: 0 0 0 -8%;
+    height: 634px;
+}
+
+img{
+    width: 450px;
+    height: 450px;
+    border-radius: 0%;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 767px) and (min-width: 501px){
+
+#tituloRutasParadas{
+    margin: 0 0 0 27%;
+    position: absolute;
+}
+
+#formulario{
+    width: 80%;
+    padding: 2% 55% 20% 0;
+    margin: 30% 5% 0 0%;
+}
+
+#formulario2{
+    width: 0px;
+    margin: 50% 0 0 -60%;
+    position:absolute;
+    opacity: 0;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+}
+@media screen and (max-width: 500px){
+
+#tituloRutasParadas{
+    margin: 0 0 0 20%;
+    position: absolute;
+}
+
+#formulario{
+    width: 80%;
+    padding: 2% 65% 20% 0%;
+    margin: 30% 5% 0 0%;
+}
+
+#formulario2{
+    width: 0px;
+    margin: 50% 0 0 -60%;
+    position:absolute;
+    opacity: 0;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+}
+
 </style>
 
 
 <body>
 
-	<P id="tituloCrucero">rutas / paradas</P>
+	<P id="tituloRutasParadas">rutas / paradas</P>
 
 	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
 
 	<ul id="menu">
-		<li><a href="VerRutasParadas" title="VISTAS">VISTAS </a></li>
+		<li><a href="Bienvenido.jsp" title="VISTAS">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -199,18 +350,6 @@ nav ul {
 		</ul>
 	</nav>
 
-	<a class="open-hide">Menu</a>
-
-	<ul class="menu">
-		<li><a href="AinadirActi.jsp">actividad</a></li>
-		<li><a href="AinadirCrucero.jsp">cruceros</a></li>
-		<li><a href="AinadirEmple.jsp">empleados</a></li>
-		<li><a href="AinadirHabita.jsp">habitaciones</a></li>
-		<li><a href="AinadirParada.jsp">paradas</a></li>
-		<li><a href="AinadirPuerto.jsp">puertos</a></li>
-		<li><a href="AinadirRuta.jsp">rutas</a></li>
-
-	</ul>
-
+	
 </body>
 </html>

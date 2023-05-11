@@ -6,10 +6,31 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Rutas</title>
 </head>
 
 <style>
+#logout {
+    width:60px;
+    padding: 10px;
+    background-color: #216eff;
+    border-radius: 10px;
+}
+
+#logout a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#logout a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+#logout:hover{
+    background-color: #216fffc5;
+}
+
 h1 {
 	font-family: 'Amarante', Tahoma, sans-serif;
 	font-weight: bold;
@@ -198,19 +219,6 @@ a:hover {
   </tbody>
 		</table>
 	</div>
-
-	<a class="open-hide">Menu</a>
-
-	<ul class="menuRayas">
-		<li><a href="VisualizarActi.jsp">actividad</a></li>
-		<li><a href="VisualizarCrucero.jsp">cruceros</a></li>
-		<li><a href="VisualizarEmple.jsp">empleados</a></li>
-		<li><a href="VisualizarHabita.jsp">habitaciones</a></li>
-		<li><a href="VisualizarParada.jsp">paradas</a></li>
-		<li><a href="VisualizarPuerto.jsp">puertos</a></li>
-		<li><a href="VisualizarRuta.jsp">rutas</a></li>
-
-	</ul>
 
 </body>
 </html>

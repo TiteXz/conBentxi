@@ -8,30 +8,48 @@
 </head>
 
 <style>
-p#tituloActividad {
+#logout {
+    width:60px;
+    padding: 10px;
+    background-color: #216eff;
+    border-radius: 10px;
+}
+
+#logout a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#logout a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+#logout:hover{
+    background-color: #216fffc5;
+}
+
+#tituloPuerto{
 	font-family: 'Courier New';
 	text-transform: uppercase;
-	margin-left: 835px;
 	margin-top: 100px;
+	margin-left:22%;
 	position: absolute;
 	font-size: 40px;
 }
 
 #menu {
-	display: inline-flex;
 	list-style: none;
-	margin-left: 38%;
-	margin-bottom: 100px;
+	float:left;
+	position: ;
 }
 
 #menu li a {
 	position: relative;
 	font-weight: bold;
 	color: rgb(0, 183, 255);
-	margin: 0px 60px;
 	text-decoration: none;
 }
-
 #menu li a:after {
 	position: absolute;
 	bottom: 7px;
@@ -116,59 +134,196 @@ nav ul {
 	color: rgb(32, 32, 226);
 }
 
-.open-hide {
-	background-color: #fff;
-	color: yellow;
-	width: 35px;
-	height: 35px;
-	display: block;
-	background-image:
-		url(https://cdn-icons-png.flaticon.com/512/54/54206.png);
-	/*https://s3-us-west-2.amazonaws.com/s.cdpn.io/6001/menu.png*/
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 25px;
-	text-indent: -9999em;
-	margin-top: -840px;
-	border-radius: 10px;
+
+@media only screen and (min-width: 1501px) {
+#tituloPuerto{
+    margin: 0 0 0 45%;
+    position: absolute;
 }
 
-.open-hide:hover {
-	cursor: pointer;
+#formulario{
+    margin: 10% 0 0 0%;
 }
 
-.menu {
-	height: 0;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-	width: 10em;
-	overflow: hidden;
-	margin-top: 0;
-	padding: 0;
-	box-sizing: border-box;
+#formulario2{
+    margin-left:-10%;
+    margin-top: 4.7%;
 }
 
-.menu:hover {
-	height: 320px;
-	padding-top: 1em;
+#menu li a{
+    margin-left: -40px;
 }
 
-.open-hide:hover+.menu {
-	height: 320px;
-	padding-top: 1em;
 }
+
+@media only screen and ((min-width: 1201px) and (max-width:1500px)) {
+#tituloPuerto{
+    margin: 0 0 0 40%;
+    position: absolute;
+}
+
+#formulario{
+     margin: 10% 0 0 0%;
+}
+
+#formulario2{
+    width: 108%;
+    margin: 6% 0 0 -7%;
+    height: 603px;
+}
+
+img{
+    width: 600px;
+    height: 520px;
+    border-radius: 0px;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+}
+
+@media only screen and ((min-width: 992px) and (max-width: 1200px)){
+#tituloPuerto{
+    margin: 0 0 0 40%;
+    position: absolute;
+}
+
+
+#formulario{
+    width: 80%;
+    padding: 2% 20% 0 10%;
+    margin: 0% 0 0 -20%;
+}
+
+#formulario2{
+    width: 110%;
+    margin: 0 0 0 -10%;
+    height: 605px;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    border-radius: 0%;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+#tituloPuerto{
+    margin: 0 0 0 40%;
+    position: absolute;
+}
+
+#formulario{
+    width: 40%;
+    padding: 2% 44% 0% 0%;
+    margin: 0 0 0 -10%;
+    height: 648px;
+}
+
+#formulario2{
+    width: 110%;
+    margin: 0 0 0 -10%;
+    height: 655px;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    border-radius: 0%;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 767px) and (min-width: 501px){
+
+#tituloPuerto{
+    margin: 0 0 0 27%;
+    position: absolute;
+}
+
+#formulario{
+    width: 80%;
+    padding: 2% 20% 20% 0;
+    margin: 30% 5% 0 0%;
+}
+
+#formulario2{
+    width: 0px;
+    margin: 50% 0 0 -60%;
+    position:absolute;
+    opacity: 0;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+}
+@media screen and (max-width: 500px){
+
+#tituloPuerto{
+    margin: 0 0 0 20%;
+    position: absolute;
+}
+
+#formulario{
+    width: 80%;
+    padding: 0% 20% 30% 0%;
+    margin: 30% 5% 0 -5%;
+}
+
+#formulario2{
+    width: 0px;
+    margin: 50% 0 0 -60%;
+    position:absolute;
+    opacity: 0;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+#menu li a{
+    margin-left: -40px;
+}
+
+}
+
 </style>
 
 
 <body>
 
-	<P id="tituloActividad">puertos</P>
+	<P id="tituloPuerto">puertos</P>
+
+	<div id="logout"> <a href="AbrirLogin">Log out</a></div>
 
 	<ul id="menu">
-		<li><a href="Crear.html" title="CREAR">CREAR</a></li>
-		<li><a href="Visualizar.html" title="VISUALIZAR">VISUALIZAR </a></li>
+		<li><a href="Bienvenido.jsp" title="VISTAS">VISTAS </a></li>
 	</ul>
 
 	<br>
@@ -205,19 +360,6 @@ nav ul {
 			</a></li>
 		</ul>
 	</nav>
-
-	<a class="open-hide">Menu</a>
-
-	<ul class="menu">
-		<li><a href="AinadirActi.jsp">actividad</a></li>
-		<li><a href="AinadirCrucero.jsp">cruceros</a></li>
-		<li><a href="AinadirEmple.jsp">empleados</a></li>
-		<li><a href="AinadirHabita.jsp">habitaciones</a></li>
-		<li><a href="AinadirParada.jsp">paradas</a></li>
-		<li><a href="AinadirPuerto.jsp">puertos</a></li>
-		<li><a href="AinadirRuta.jsp">rutas</a></li>
-
-	</ul>
 
 </body>
 </html>
