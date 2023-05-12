@@ -7,8 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import clases.Cliente;
-import modelo.modeloCliente;
+import clases.Reserva;
+import clases.Ruta;
+import modelo.modeloCrucero;
+import modelo.modeloHabitacion;
+import modelo.modeloReserva;
+import modelo.modeloRuta;
 
 /**
  * Servlet para que un cliente haga la reserva de una habitacion
@@ -32,29 +36,7 @@ public class HacerReserva extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		//datuak jaso
-		String nombreCrucero = request.getParameter("nombreCrucero");
-		String dni = request.getParameter("dniCliente");
-		String nombre = request.getParameter("nombre");
-		String apellido = request.getParameter("apellido");
-		Boolean mayor_edad = request.getParameter("mayor_edad") == null? false :true;
-
-		int num_tarjeta = Integer.parseInt(request.getParameter("num_tarjeta"));
 		
-		//insertatu
-		modeloCliente mC = new modeloCliente();
-		
-		Cliente cliente = new Cliente();
-		cliente.setDni(dni);
-		cliente.setNombre(nombre);
-		cliente.setApellido(apellido);
-		cliente.setMayor_edad(mayor_edad);
-		cliente.setNum_tarjeta(num_tarjeta);
-		
-		mC.Conectar();
-		mC.ainadirUsuario(cliente);
-		mC.cerrar();
-		
-		request.getRequestDispatcher("Terminado.jsp").forward(request, response);
 	}
 
 	/**
@@ -62,7 +44,40 @@ public class HacerReserva extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String nombreCrucero = request.getParameter("NombreCrucero");
+		String dni = request.getParameter("dniCliente");
+		Double precio = Double.parseDouble(request.getParameter("precio"));
+		
+		
+		modeloCrucero mC = new modeloCrucero();
+		modeloRuta mR = new modeloRuta();
+		modeloHabitacion mH = new modeloHabitacion();
+		modeloReserva mRe = new modeloReserva();
+		
+		//insertatu
+		mC.Conectar();
+		int id_crucero = mC.getIdCrucero(nombreCrucero);
+		int id_ruta = mC.getId_ruta(id_crucero);
+		mC.cerrar();
+		mR.Conectar();
+		Ruta ruta = mR.getRuta(id_ruta);	
+		mR.cerrar();
+		mH.Conectar();
+		int numero_habitacion = mH.getNumeroHabitacion(precio);
+		mH.cerrar();
+		
+		Reserva reserva = new Reserva();
+		reserva.setId_crucero(id_crucero);
+		reserva.setDni_cliente(dni);
+		reserva.setFecha_ini(ruta.getFecha_ini());
+		reserva.setFecha_fin(ruta.getFecha_fin());
+		reserva.setNumero_habitacion(numero_habitacion);
+		
+		mRe.Conectar();
+		mRe.ainadirReserva(reserva);
+		mRe.cerrar();
+		
+		request.getRequestDispatcher("Home.jsp").forward(request, response);
 	}
 
 }

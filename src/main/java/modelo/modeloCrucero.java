@@ -152,5 +152,57 @@ public class modeloCrucero extends Conexion{
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * 
+	 * @param nombreCrucero para seleccionar la id del crucero con ese nombre
+	 * @return la id del crucero seleccionado
+	 */
+	public int getIdCrucero(String nombreCrucero) {
+		int id_crucero = 0;
+		
+		try {
+			PreparedStatement pst = conexion.prepareStatement("SELECT id_crucero FROM cruceros WHERE nombre = ?");
+			
+			pst.setString(1, nombreCrucero);
+			
+			ResultSet resultado = pst.executeQuery();
+			
+			resultado.next();
+			
+			id_crucero = resultado.getInt("id_crucero");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return id_crucero;
+	}
+
+	/**
+	 * 
+	 * @param id_crucero para seleccionar la ruta de ese crucero
+	 * @return la id de la ruta seleccionada
+	 */
+	public int getId_ruta(int id_crucero) {
+		int id_ruta = 0;
+		
+		try {
+			PreparedStatement pst = conexion.prepareStatement("SELECT id_ruta FROM cruceros WHERE id_crucero = ?");
+			
+			pst.setInt(1, id_crucero);
+			
+			ResultSet resultado = pst.executeQuery();
+			
+			resultado.next();
+			
+			id_ruta = resultado.getInt("id_ruta");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return id_ruta;
+	}
 	
 }

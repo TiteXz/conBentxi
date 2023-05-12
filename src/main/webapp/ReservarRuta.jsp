@@ -369,10 +369,10 @@ transform: scaleY(120%);
 
     <section id="datos">
         <div id="datosCliente">
-            <form method="get" action="HacerReserva">
+            <form method="POST" action="HacerReserva">
                 <div class="form-group col-md-6">
                     <label for="inputDni">Dni</label>
-                    <input type="text" class="form-control" id="dniCliente" placeholder="DNI">
+                    <input type="text" class="form-control" name="dniCliente" id="dniCliente" placeholder="DNI">
                 </div>
 
                 <div class="form-row">
@@ -399,6 +399,30 @@ transform: scaleY(120%);
                         </label>
                     </div>
                 </div>
+                <div class="form-group col-md-7">
+                    <label for="inputDni">Destino</label>
+                    <input readonly type="text" class="form-control" id="Destino_ruta" placeholder="${ruta.destino}">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-7">
+                        <label for="inputNombre">Origen</label>
+                        <input readonly type="text" class="form-control" id="Origen_ruta" placeholder="${ruta.origen}">
+                    </div>
+                </div>
+                <div class="form-group col-md-7">
+                	<label for="inputApellidos">Crucero</label>
+                    <input readonly type="text" class="form-control" name="NombreCrucero" id="NombreCrucero" value="${crucero.nombre}" placeholder="${crucero.nombre}">
+                </div>
+
+                <div class="form-group col-md-7">
+                    <label for="inputState">Habitacion</label>
+                    <select name="precio" id="inputState" class="form-control">
+                        <c:forEach items="${habitaciones}" var="habitacion">
+                            <option>${habitacion.precio}</option>
+                        </c:forEach>
+                    </select>
+                </div>
                 <br>
                 <button type="submit" class="btn btn-primary">Reservar</button>
             </form>
@@ -406,7 +430,7 @@ transform: scaleY(120%);
 
        <div id="datosReserva">
     
-        <form>
+        <%--<form>
             <fieldset>
                 <div class="form-group col-md-7">
                     <label for="inputDni">Destino</label>
@@ -421,7 +445,7 @@ transform: scaleY(120%);
                 </div>
                 <div class="form-group col-md-7">
                 	<label for="inputApellidos">Crucero</label>
-                    <input readonly type="text" class="form-control" id="NombreCrucero" placeholder="${crucero.nombre}">
+                    <input readonly type="text" class="form-control" name="nombreCrucero" id="NombreCrucero" placeholder="${crucero.nombre}">
                 </div>
 
                 <div class="form-group col-md-7">
@@ -433,7 +457,7 @@ transform: scaleY(120%);
                     </select>
                 </div>
             </fieldset>
-        </form>
+        </form>--%>
     
 </div>
 

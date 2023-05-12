@@ -206,5 +206,31 @@ public class modeloHabitacion extends Conexion {
 		
 		return habitacion;
 	}
+
+	/**
+	 * 
+	 * @param precio para buscar el numero de la habitacion con ese precio
+	 * @return el numero de la habitacion seleccionada
+	 */
+	public int getNumeroHabitacion(Double precio) {
+		int numero_habitacion = 0;
+		
+		try {
+			PreparedStatement pst = conexion.prepareStatement("SELECT numero_habitacion FROM habitaciones WHERE precio = ?");
+			
+			pst.setDouble(1, precio);
+			
+			ResultSet resultado = pst.executeQuery();
+			
+			resultado.next();
+			
+			numero_habitacion = resultado.getInt("numero_habitacion");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return numero_habitacion;
+	}
 	
 }
